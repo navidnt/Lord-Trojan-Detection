@@ -1,0 +1,487 @@
+/////////////////////////////////////////////////////////////
+// Created by: Synopsys DC Expert(TM) in wire load mode
+// Version   : V-2023.12-SP5
+// Date      : Tue May 27 23:11:50 2025
+/////////////////////////////////////////////////////////////
+
+
+module Trojan4 ( clk, rst, key, leak );
+  input [63:0] key;
+  output [63:0] leak;
+  input clk, rst;
+  wire   n384, n385, n386, n387, n388, n389, n390, n391, n392, n393, n394,
+         n395, n396, n397, n398, n399, n400, n401, n402, n403, n404, n405,
+         n406, n407, n408, n409, n410, n411, n412, n413, n414, n415, n416,
+         n417, n418, n419, n420, n421, n422, n423, n424, n425, n426, n427,
+         n428, n429, n430, n431, n432, n433, n434, n435, n436, n437, n438,
+         n439, n440, n441, n442, n443, n444, n445, n446, n447, n448, n449,
+         n450, n451, n452, n453, n454, n455, n456, n457, n458, n459, n460,
+         n461, n462, n463, n464, n465, n466, n467, n468, n469, n470, n471,
+         n472, n473, n474, n475, n476, n477, n478, n479, n480, n481, n482,
+         n483, n484, n485, n486, n487, n488, n489, n490, n491, n492, n493,
+         n494, n495, n496, n497, n498, n499, n500, n501, n502, n503, n504,
+         n505, n506, n507, n508, n509, n510, n511, n512, n513, n514, n515,
+         n516, n517, n518, n519, n520, n521, n522, n523, n524, n525, n526,
+         n527, n528, n529, n530, n531, n532, n533, n534, n535, n536, n537,
+         n538, n539, n540, n541, n542, n543, n544, n545, n546, n547, n548,
+         n549, n550, n551, n552, n553, n554, n555, n556, n557, n558, n559,
+         n560, n561, n562, n563, n564, n565, n566, n567, n568, n569, n570,
+         n571, n572, n573, n574, n575, n576, n577, n578, n579, n580, n581,
+         n582, n583, n584, n585, n586, n587, n588, n589, n590, n591, n592,
+         n593, n594, n595, n596, n597, n598, n599, n600, n601, n602, n603,
+         n604, n605, n606, n607, n608, n609, n610, n611, n612, n613, n614,
+         n615, n616, n617, n618, n619, n620, n621, n622, n623, n624, n625,
+         n626, n627, n628, n629, n630, n631, n632, n633, n634, n635, n636,
+         n637, n638, n639, n640, n641, n642, n643, n644, n645, n646, n647,
+         n648, n649, n650, n651, n652, n653, n654, n655, n656, n657, n658,
+         n659, n660, n661, n662, n663, n664, n665, n666, n667, n668, n669;
+  wire   [15:0] lfsr;
+
+  DFFASRHQNx1_ASAP7_75t_R \lfsr_reg[0]  ( .D(n666), .CLK(clk), .SETN(1'b1), 
+        .RESETN(n669), .QN(lfsr[0]) );
+  DFFASRHQNx1_ASAP7_75t_R \lfsr_reg[1]  ( .D(n448), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(lfsr[1]) );
+  DFFASRHQNx1_ASAP7_75t_R \lfsr_reg[2]  ( .D(n449), .CLK(clk), .SETN(1'b1), 
+        .RESETN(n669), .QN(lfsr[2]) );
+  DFFASRHQNx1_ASAP7_75t_R \lfsr_reg[3]  ( .D(n450), .CLK(clk), .SETN(1'b1), 
+        .RESETN(n669), .QN(lfsr[3]) );
+  DFFASRHQNx1_ASAP7_75t_R \lfsr_reg[4]  ( .D(n451), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(lfsr[4]) );
+  DFFASRHQNx1_ASAP7_75t_R \lfsr_reg[5]  ( .D(n452), .CLK(clk), .SETN(1'b1), 
+        .RESETN(n669), .QN(lfsr[5]) );
+  DFFASRHQNx1_ASAP7_75t_R \lfsr_reg[6]  ( .D(n453), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(lfsr[6]) );
+  DFFASRHQNx1_ASAP7_75t_R \lfsr_reg[7]  ( .D(n454), .CLK(clk), .SETN(1'b1), 
+        .RESETN(n669), .QN(lfsr[7]) );
+  DFFASRHQNx1_ASAP7_75t_R \lfsr_reg[8]  ( .D(n455), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(lfsr[8]) );
+  DFFASRHQNx1_ASAP7_75t_R \lfsr_reg[9]  ( .D(n456), .CLK(clk), .SETN(1'b1), 
+        .RESETN(n669), .QN(lfsr[9]) );
+  DFFASRHQNx1_ASAP7_75t_R \lfsr_reg[10]  ( .D(n457), .CLK(clk), .SETN(1'b1), 
+        .RESETN(n669), .QN(lfsr[10]) );
+  DFFASRHQNx1_ASAP7_75t_R \lfsr_reg[11]  ( .D(n460), .CLK(clk), .SETN(1'b1), 
+        .RESETN(n669), .QN(lfsr[11]) );
+  DFFASRHQNx1_ASAP7_75t_R \lfsr_reg[12]  ( .D(n461), .CLK(clk), .SETN(1'b1), 
+        .RESETN(n669), .QN(lfsr[12]) );
+  DFFASRHQNx1_ASAP7_75t_R \lfsr_reg[13]  ( .D(n462), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(lfsr[13]) );
+  DFFASRHQNx1_ASAP7_75t_R \lfsr_reg[14]  ( .D(n463), .CLK(clk), .SETN(1'b1), 
+        .RESETN(n669), .QN(lfsr[14]) );
+  DFFASRHQNx1_ASAP7_75t_R \lfsr_reg[15]  ( .D(n464), .CLK(clk), .SETN(1'b1), 
+        .RESETN(n669), .QN(lfsr[15]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[63]  ( .D(n602), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[63]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[62]  ( .D(n603), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[62]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[61]  ( .D(n604), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[61]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[60]  ( .D(n605), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[60]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[59]  ( .D(n606), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[59]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[58]  ( .D(n607), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[58]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[57]  ( .D(n608), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[57]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[56]  ( .D(n609), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[56]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[55]  ( .D(n610), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[55]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[54]  ( .D(n611), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[54]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[53]  ( .D(n612), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[53]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[52]  ( .D(n613), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[52]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[51]  ( .D(n614), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[51]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[50]  ( .D(n615), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[50]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[49]  ( .D(n616), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[49]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[48]  ( .D(n617), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[48]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[47]  ( .D(n618), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[47]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[46]  ( .D(n619), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[46]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[45]  ( .D(n620), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[45]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[44]  ( .D(n621), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[44]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[43]  ( .D(n622), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[43]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[42]  ( .D(n623), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[42]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[41]  ( .D(n624), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[41]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[40]  ( .D(n625), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[40]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[39]  ( .D(n626), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[39]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[38]  ( .D(n627), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[38]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[37]  ( .D(n628), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[37]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[36]  ( .D(n629), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[36]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[35]  ( .D(n630), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[35]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[34]  ( .D(n631), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[34]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[33]  ( .D(n632), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[33]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[32]  ( .D(n633), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[32]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[31]  ( .D(n634), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[31]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[30]  ( .D(n635), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[30]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[29]  ( .D(n636), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[29]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[28]  ( .D(n637), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[28]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[27]  ( .D(n638), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[27]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[26]  ( .D(n639), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[26]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[25]  ( .D(n640), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[25]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[24]  ( .D(n641), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[24]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[23]  ( .D(n642), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[23]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[22]  ( .D(n643), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[22]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[21]  ( .D(n644), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[21]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[20]  ( .D(n645), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[20]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[19]  ( .D(n646), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[19]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[18]  ( .D(n647), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[18]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[17]  ( .D(n648), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[17]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[16]  ( .D(n649), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[16]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[15]  ( .D(n650), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[15]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[14]  ( .D(n651), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[14]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[13]  ( .D(n652), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[13]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[12]  ( .D(n653), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[12]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[11]  ( .D(n654), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[11]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[10]  ( .D(n655), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[10]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[9]  ( .D(n656), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[9]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[8]  ( .D(n657), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[8]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[7]  ( .D(n658), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[7]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[6]  ( .D(n659), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[6]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[5]  ( .D(n660), .CLK(clk), .SETN(n669), 
+        .RESETN(1'b1), .QN(leak[5]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[4]  ( .D(n661), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[4]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[3]  ( .D(n662), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[3]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[2]  ( .D(n663), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[2]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[1]  ( .D(n664), .CLK(clk), .SETN(n668), 
+        .RESETN(1'b1), .QN(leak[1]) );
+  DFFASRHQNx1_ASAP7_75t_R \leak_reg[0]  ( .D(n665), .CLK(clk), .SETN(n667), 
+        .RESETN(1'b1), .QN(leak[0]) );
+  INVx2_ASAP7_75t_R U448 ( .A(key[63]), .Y(n384) );
+  INVx2_ASAP7_75t_R U449 ( .A(key[62]), .Y(n385) );
+  INVx2_ASAP7_75t_R U450 ( .A(key[61]), .Y(n386) );
+  INVx2_ASAP7_75t_R U451 ( .A(key[60]), .Y(n387) );
+  INVx2_ASAP7_75t_R U452 ( .A(key[59]), .Y(n388) );
+  INVx2_ASAP7_75t_R U453 ( .A(key[58]), .Y(n389) );
+  INVx2_ASAP7_75t_R U454 ( .A(key[57]), .Y(n390) );
+  INVx2_ASAP7_75t_R U455 ( .A(key[56]), .Y(n391) );
+  INVx2_ASAP7_75t_R U456 ( .A(key[55]), .Y(n392) );
+  INVx2_ASAP7_75t_R U457 ( .A(key[54]), .Y(n393) );
+  INVx2_ASAP7_75t_R U458 ( .A(key[53]), .Y(n394) );
+  INVx2_ASAP7_75t_R U459 ( .A(key[52]), .Y(n395) );
+  INVx2_ASAP7_75t_R U460 ( .A(key[51]), .Y(n396) );
+  INVx2_ASAP7_75t_R U461 ( .A(key[50]), .Y(n397) );
+  INVx2_ASAP7_75t_R U462 ( .A(key[49]), .Y(n398) );
+  INVx2_ASAP7_75t_R U463 ( .A(key[48]), .Y(n399) );
+  INVx2_ASAP7_75t_R U464 ( .A(key[47]), .Y(n400) );
+  INVx2_ASAP7_75t_R U465 ( .A(key[46]), .Y(n401) );
+  INVx2_ASAP7_75t_R U466 ( .A(key[45]), .Y(n402) );
+  INVx2_ASAP7_75t_R U467 ( .A(key[44]), .Y(n403) );
+  INVx2_ASAP7_75t_R U468 ( .A(key[43]), .Y(n404) );
+  INVx2_ASAP7_75t_R U469 ( .A(key[42]), .Y(n405) );
+  INVx2_ASAP7_75t_R U470 ( .A(key[41]), .Y(n406) );
+  INVx2_ASAP7_75t_R U471 ( .A(key[40]), .Y(n407) );
+  INVx2_ASAP7_75t_R U472 ( .A(key[39]), .Y(n408) );
+  INVx2_ASAP7_75t_R U473 ( .A(key[38]), .Y(n409) );
+  INVx2_ASAP7_75t_R U474 ( .A(key[37]), .Y(n410) );
+  INVx2_ASAP7_75t_R U475 ( .A(key[36]), .Y(n411) );
+  INVx2_ASAP7_75t_R U476 ( .A(key[35]), .Y(n412) );
+  INVx2_ASAP7_75t_R U477 ( .A(key[34]), .Y(n413) );
+  INVx2_ASAP7_75t_R U478 ( .A(key[33]), .Y(n414) );
+  INVx2_ASAP7_75t_R U479 ( .A(key[32]), .Y(n415) );
+  INVx2_ASAP7_75t_R U480 ( .A(key[31]), .Y(n416) );
+  INVx2_ASAP7_75t_R U481 ( .A(key[30]), .Y(n417) );
+  INVx2_ASAP7_75t_R U482 ( .A(key[29]), .Y(n418) );
+  INVx2_ASAP7_75t_R U483 ( .A(key[28]), .Y(n419) );
+  INVx2_ASAP7_75t_R U484 ( .A(key[27]), .Y(n420) );
+  INVx2_ASAP7_75t_R U485 ( .A(key[26]), .Y(n421) );
+  INVx2_ASAP7_75t_R U486 ( .A(key[25]), .Y(n422) );
+  INVx2_ASAP7_75t_R U487 ( .A(key[24]), .Y(n423) );
+  INVx2_ASAP7_75t_R U488 ( .A(key[23]), .Y(n424) );
+  INVx2_ASAP7_75t_R U489 ( .A(key[22]), .Y(n425) );
+  INVx2_ASAP7_75t_R U490 ( .A(key[21]), .Y(n426) );
+  INVx2_ASAP7_75t_R U491 ( .A(key[20]), .Y(n427) );
+  INVx2_ASAP7_75t_R U492 ( .A(key[19]), .Y(n428) );
+  INVx2_ASAP7_75t_R U493 ( .A(key[18]), .Y(n429) );
+  INVx2_ASAP7_75t_R U494 ( .A(key[17]), .Y(n430) );
+  INVx2_ASAP7_75t_R U495 ( .A(key[16]), .Y(n431) );
+  INVx2_ASAP7_75t_R U496 ( .A(key[15]), .Y(n432) );
+  INVx2_ASAP7_75t_R U497 ( .A(key[14]), .Y(n433) );
+  INVx2_ASAP7_75t_R U498 ( .A(key[13]), .Y(n434) );
+  INVx2_ASAP7_75t_R U499 ( .A(key[12]), .Y(n435) );
+  INVx2_ASAP7_75t_R U500 ( .A(key[11]), .Y(n436) );
+  INVx2_ASAP7_75t_R U501 ( .A(key[10]), .Y(n437) );
+  INVx2_ASAP7_75t_R U502 ( .A(key[9]), .Y(n438) );
+  INVx2_ASAP7_75t_R U503 ( .A(key[8]), .Y(n439) );
+  INVx2_ASAP7_75t_R U504 ( .A(key[7]), .Y(n440) );
+  INVx2_ASAP7_75t_R U505 ( .A(key[6]), .Y(n441) );
+  INVx2_ASAP7_75t_R U506 ( .A(key[5]), .Y(n442) );
+  INVx2_ASAP7_75t_R U507 ( .A(key[4]), .Y(n443) );
+  INVx2_ASAP7_75t_R U508 ( .A(key[3]), .Y(n444) );
+  INVx2_ASAP7_75t_R U509 ( .A(key[2]), .Y(n445) );
+  INVx2_ASAP7_75t_R U510 ( .A(key[1]), .Y(n446) );
+  INVx2_ASAP7_75t_R U511 ( .A(key[0]), .Y(n447) );
+  INVx2_ASAP7_75t_R U512 ( .A(lfsr[0]), .Y(n448) );
+  INVx2_ASAP7_75t_R U513 ( .A(lfsr[1]), .Y(n449) );
+  INVx2_ASAP7_75t_R U514 ( .A(lfsr[2]), .Y(n450) );
+  INVx2_ASAP7_75t_R U515 ( .A(lfsr[3]), .Y(n451) );
+  INVx2_ASAP7_75t_R U516 ( .A(lfsr[4]), .Y(n452) );
+  INVx2_ASAP7_75t_R U517 ( .A(lfsr[5]), .Y(n453) );
+  INVx2_ASAP7_75t_R U518 ( .A(lfsr[6]), .Y(n454) );
+  INVx2_ASAP7_75t_R U519 ( .A(lfsr[7]), .Y(n455) );
+  INVx2_ASAP7_75t_R U520 ( .A(lfsr[8]), .Y(n456) );
+  INVx2_ASAP7_75t_R U521 ( .A(lfsr[9]), .Y(n457) );
+  INVx2_ASAP7_75t_R U522 ( .A(n595), .Y(n458) );
+  INVx2_ASAP7_75t_R U523 ( .A(n597), .Y(n459) );
+  INVx2_ASAP7_75t_R U524 ( .A(lfsr[10]), .Y(n460) );
+  INVx2_ASAP7_75t_R U525 ( .A(lfsr[11]), .Y(n461) );
+  INVx2_ASAP7_75t_R U526 ( .A(lfsr[12]), .Y(n462) );
+  INVx2_ASAP7_75t_R U527 ( .A(lfsr[13]), .Y(n463) );
+  INVx2_ASAP7_75t_R U528 ( .A(lfsr[14]), .Y(n464) );
+  INVx2_ASAP7_75t_R U529 ( .A(lfsr[15]), .Y(n465) );
+  AND2x2_ASAP7_75t_R U530 ( .A(n466), .B(n467), .Y(n602) );
+  OR2x2_ASAP7_75t_R U531 ( .A(key[63]), .B(n465), .Y(n467) );
+  OR2x2_ASAP7_75t_R U532 ( .A(lfsr[15]), .B(n384), .Y(n466) );
+  AND2x2_ASAP7_75t_R U533 ( .A(n468), .B(n469), .Y(n603) );
+  OR2x2_ASAP7_75t_R U534 ( .A(key[62]), .B(n464), .Y(n469) );
+  OR2x2_ASAP7_75t_R U535 ( .A(lfsr[14]), .B(n385), .Y(n468) );
+  AND2x2_ASAP7_75t_R U536 ( .A(n470), .B(n471), .Y(n604) );
+  OR2x2_ASAP7_75t_R U537 ( .A(key[61]), .B(n463), .Y(n471) );
+  OR2x2_ASAP7_75t_R U538 ( .A(lfsr[13]), .B(n386), .Y(n470) );
+  AND2x2_ASAP7_75t_R U539 ( .A(n472), .B(n473), .Y(n605) );
+  OR2x2_ASAP7_75t_R U540 ( .A(key[60]), .B(n462), .Y(n473) );
+  OR2x2_ASAP7_75t_R U541 ( .A(lfsr[12]), .B(n387), .Y(n472) );
+  AND2x2_ASAP7_75t_R U542 ( .A(n474), .B(n475), .Y(n606) );
+  OR2x2_ASAP7_75t_R U543 ( .A(key[59]), .B(n461), .Y(n475) );
+  OR2x2_ASAP7_75t_R U544 ( .A(lfsr[11]), .B(n388), .Y(n474) );
+  AND2x2_ASAP7_75t_R U545 ( .A(n476), .B(n477), .Y(n607) );
+  OR2x2_ASAP7_75t_R U546 ( .A(key[58]), .B(n460), .Y(n477) );
+  OR2x2_ASAP7_75t_R U547 ( .A(lfsr[10]), .B(n389), .Y(n476) );
+  AND2x2_ASAP7_75t_R U548 ( .A(n478), .B(n479), .Y(n608) );
+  OR2x2_ASAP7_75t_R U549 ( .A(key[57]), .B(n457), .Y(n479) );
+  OR2x2_ASAP7_75t_R U550 ( .A(lfsr[9]), .B(n390), .Y(n478) );
+  AND2x2_ASAP7_75t_R U551 ( .A(n480), .B(n481), .Y(n609) );
+  OR2x2_ASAP7_75t_R U552 ( .A(key[56]), .B(n456), .Y(n481) );
+  OR2x2_ASAP7_75t_R U553 ( .A(lfsr[8]), .B(n391), .Y(n480) );
+  AND2x2_ASAP7_75t_R U554 ( .A(n482), .B(n483), .Y(n610) );
+  OR2x2_ASAP7_75t_R U555 ( .A(key[55]), .B(n455), .Y(n483) );
+  OR2x2_ASAP7_75t_R U556 ( .A(lfsr[7]), .B(n392), .Y(n482) );
+  AND2x2_ASAP7_75t_R U557 ( .A(n484), .B(n485), .Y(n611) );
+  OR2x2_ASAP7_75t_R U558 ( .A(key[54]), .B(n454), .Y(n485) );
+  OR2x2_ASAP7_75t_R U559 ( .A(lfsr[6]), .B(n393), .Y(n484) );
+  AND2x2_ASAP7_75t_R U560 ( .A(n486), .B(n487), .Y(n612) );
+  OR2x2_ASAP7_75t_R U561 ( .A(key[53]), .B(n453), .Y(n487) );
+  OR2x2_ASAP7_75t_R U562 ( .A(lfsr[5]), .B(n394), .Y(n486) );
+  AND2x2_ASAP7_75t_R U563 ( .A(n488), .B(n489), .Y(n613) );
+  OR2x2_ASAP7_75t_R U564 ( .A(key[52]), .B(n452), .Y(n489) );
+  OR2x2_ASAP7_75t_R U565 ( .A(lfsr[4]), .B(n395), .Y(n488) );
+  AND2x2_ASAP7_75t_R U566 ( .A(n490), .B(n491), .Y(n614) );
+  OR2x2_ASAP7_75t_R U567 ( .A(key[51]), .B(n451), .Y(n491) );
+  OR2x2_ASAP7_75t_R U568 ( .A(lfsr[3]), .B(n396), .Y(n490) );
+  AND2x2_ASAP7_75t_R U569 ( .A(n492), .B(n493), .Y(n615) );
+  OR2x2_ASAP7_75t_R U570 ( .A(key[50]), .B(n450), .Y(n493) );
+  OR2x2_ASAP7_75t_R U571 ( .A(lfsr[2]), .B(n397), .Y(n492) );
+  AND2x2_ASAP7_75t_R U572 ( .A(n494), .B(n495), .Y(n616) );
+  OR2x2_ASAP7_75t_R U573 ( .A(key[49]), .B(n449), .Y(n495) );
+  OR2x2_ASAP7_75t_R U574 ( .A(lfsr[1]), .B(n398), .Y(n494) );
+  AND2x2_ASAP7_75t_R U575 ( .A(n496), .B(n497), .Y(n617) );
+  OR2x2_ASAP7_75t_R U576 ( .A(key[48]), .B(n448), .Y(n497) );
+  OR2x2_ASAP7_75t_R U577 ( .A(lfsr[0]), .B(n399), .Y(n496) );
+  AND2x2_ASAP7_75t_R U578 ( .A(n498), .B(n499), .Y(n618) );
+  OR2x2_ASAP7_75t_R U579 ( .A(key[47]), .B(n465), .Y(n499) );
+  OR2x2_ASAP7_75t_R U580 ( .A(lfsr[15]), .B(n400), .Y(n498) );
+  AND2x2_ASAP7_75t_R U581 ( .A(n500), .B(n501), .Y(n619) );
+  OR2x2_ASAP7_75t_R U582 ( .A(key[46]), .B(n464), .Y(n501) );
+  OR2x2_ASAP7_75t_R U583 ( .A(lfsr[14]), .B(n401), .Y(n500) );
+  AND2x2_ASAP7_75t_R U584 ( .A(n502), .B(n503), .Y(n620) );
+  OR2x2_ASAP7_75t_R U585 ( .A(key[45]), .B(n463), .Y(n503) );
+  OR2x2_ASAP7_75t_R U586 ( .A(lfsr[13]), .B(n402), .Y(n502) );
+  AND2x2_ASAP7_75t_R U587 ( .A(n504), .B(n505), .Y(n621) );
+  OR2x2_ASAP7_75t_R U588 ( .A(key[44]), .B(n462), .Y(n505) );
+  OR2x2_ASAP7_75t_R U589 ( .A(lfsr[12]), .B(n403), .Y(n504) );
+  AND2x2_ASAP7_75t_R U590 ( .A(n506), .B(n507), .Y(n622) );
+  OR2x2_ASAP7_75t_R U591 ( .A(key[43]), .B(n461), .Y(n507) );
+  OR2x2_ASAP7_75t_R U592 ( .A(lfsr[11]), .B(n404), .Y(n506) );
+  AND2x2_ASAP7_75t_R U593 ( .A(n508), .B(n509), .Y(n623) );
+  OR2x2_ASAP7_75t_R U594 ( .A(key[42]), .B(n460), .Y(n509) );
+  OR2x2_ASAP7_75t_R U595 ( .A(lfsr[10]), .B(n405), .Y(n508) );
+  AND2x2_ASAP7_75t_R U596 ( .A(n510), .B(n511), .Y(n624) );
+  OR2x2_ASAP7_75t_R U597 ( .A(key[41]), .B(n457), .Y(n511) );
+  OR2x2_ASAP7_75t_R U598 ( .A(lfsr[9]), .B(n406), .Y(n510) );
+  AND2x2_ASAP7_75t_R U599 ( .A(n512), .B(n513), .Y(n625) );
+  OR2x2_ASAP7_75t_R U600 ( .A(key[40]), .B(n456), .Y(n513) );
+  OR2x2_ASAP7_75t_R U601 ( .A(lfsr[8]), .B(n407), .Y(n512) );
+  AND2x2_ASAP7_75t_R U602 ( .A(n514), .B(n515), .Y(n626) );
+  OR2x2_ASAP7_75t_R U603 ( .A(key[39]), .B(n455), .Y(n515) );
+  OR2x2_ASAP7_75t_R U604 ( .A(lfsr[7]), .B(n408), .Y(n514) );
+  AND2x2_ASAP7_75t_R U605 ( .A(n516), .B(n517), .Y(n627) );
+  OR2x2_ASAP7_75t_R U606 ( .A(key[38]), .B(n454), .Y(n517) );
+  OR2x2_ASAP7_75t_R U607 ( .A(lfsr[6]), .B(n409), .Y(n516) );
+  AND2x2_ASAP7_75t_R U608 ( .A(n518), .B(n519), .Y(n628) );
+  OR2x2_ASAP7_75t_R U609 ( .A(key[37]), .B(n453), .Y(n519) );
+  OR2x2_ASAP7_75t_R U610 ( .A(lfsr[5]), .B(n410), .Y(n518) );
+  AND2x2_ASAP7_75t_R U611 ( .A(n520), .B(n521), .Y(n629) );
+  OR2x2_ASAP7_75t_R U612 ( .A(key[36]), .B(n452), .Y(n521) );
+  OR2x2_ASAP7_75t_R U613 ( .A(lfsr[4]), .B(n411), .Y(n520) );
+  AND2x2_ASAP7_75t_R U614 ( .A(n522), .B(n523), .Y(n630) );
+  OR2x2_ASAP7_75t_R U615 ( .A(key[35]), .B(n451), .Y(n523) );
+  OR2x2_ASAP7_75t_R U616 ( .A(lfsr[3]), .B(n412), .Y(n522) );
+  AND2x2_ASAP7_75t_R U617 ( .A(n524), .B(n525), .Y(n631) );
+  OR2x2_ASAP7_75t_R U618 ( .A(key[34]), .B(n450), .Y(n525) );
+  OR2x2_ASAP7_75t_R U619 ( .A(lfsr[2]), .B(n413), .Y(n524) );
+  AND2x2_ASAP7_75t_R U620 ( .A(n526), .B(n527), .Y(n632) );
+  OR2x2_ASAP7_75t_R U621 ( .A(key[33]), .B(n449), .Y(n527) );
+  OR2x2_ASAP7_75t_R U622 ( .A(lfsr[1]), .B(n414), .Y(n526) );
+  AND2x2_ASAP7_75t_R U623 ( .A(n528), .B(n529), .Y(n633) );
+  OR2x2_ASAP7_75t_R U624 ( .A(key[32]), .B(n448), .Y(n529) );
+  OR2x2_ASAP7_75t_R U625 ( .A(lfsr[0]), .B(n415), .Y(n528) );
+  AND2x2_ASAP7_75t_R U626 ( .A(n530), .B(n531), .Y(n634) );
+  OR2x2_ASAP7_75t_R U627 ( .A(key[31]), .B(n465), .Y(n531) );
+  OR2x2_ASAP7_75t_R U628 ( .A(lfsr[15]), .B(n416), .Y(n530) );
+  AND2x2_ASAP7_75t_R U629 ( .A(n532), .B(n533), .Y(n635) );
+  OR2x2_ASAP7_75t_R U630 ( .A(key[30]), .B(n464), .Y(n533) );
+  OR2x2_ASAP7_75t_R U631 ( .A(lfsr[14]), .B(n417), .Y(n532) );
+  AND2x2_ASAP7_75t_R U632 ( .A(n534), .B(n535), .Y(n636) );
+  OR2x2_ASAP7_75t_R U633 ( .A(key[29]), .B(n463), .Y(n535) );
+  OR2x2_ASAP7_75t_R U634 ( .A(lfsr[13]), .B(n418), .Y(n534) );
+  AND2x2_ASAP7_75t_R U635 ( .A(n536), .B(n537), .Y(n637) );
+  OR2x2_ASAP7_75t_R U636 ( .A(key[28]), .B(n462), .Y(n537) );
+  OR2x2_ASAP7_75t_R U637 ( .A(lfsr[12]), .B(n419), .Y(n536) );
+  AND2x2_ASAP7_75t_R U638 ( .A(n538), .B(n539), .Y(n638) );
+  OR2x2_ASAP7_75t_R U639 ( .A(key[27]), .B(n461), .Y(n539) );
+  OR2x2_ASAP7_75t_R U640 ( .A(lfsr[11]), .B(n420), .Y(n538) );
+  AND2x2_ASAP7_75t_R U641 ( .A(n540), .B(n541), .Y(n639) );
+  OR2x2_ASAP7_75t_R U642 ( .A(key[26]), .B(n460), .Y(n541) );
+  OR2x2_ASAP7_75t_R U643 ( .A(lfsr[10]), .B(n421), .Y(n540) );
+  AND2x2_ASAP7_75t_R U644 ( .A(n542), .B(n543), .Y(n640) );
+  OR2x2_ASAP7_75t_R U645 ( .A(key[25]), .B(n457), .Y(n543) );
+  OR2x2_ASAP7_75t_R U646 ( .A(lfsr[9]), .B(n422), .Y(n542) );
+  AND2x2_ASAP7_75t_R U647 ( .A(n544), .B(n545), .Y(n641) );
+  OR2x2_ASAP7_75t_R U648 ( .A(key[24]), .B(n456), .Y(n545) );
+  OR2x2_ASAP7_75t_R U649 ( .A(lfsr[8]), .B(n423), .Y(n544) );
+  AND2x2_ASAP7_75t_R U650 ( .A(n546), .B(n547), .Y(n642) );
+  OR2x2_ASAP7_75t_R U651 ( .A(key[23]), .B(n455), .Y(n547) );
+  OR2x2_ASAP7_75t_R U652 ( .A(lfsr[7]), .B(n424), .Y(n546) );
+  AND2x2_ASAP7_75t_R U653 ( .A(n548), .B(n549), .Y(n643) );
+  OR2x2_ASAP7_75t_R U654 ( .A(key[22]), .B(n454), .Y(n549) );
+  OR2x2_ASAP7_75t_R U655 ( .A(lfsr[6]), .B(n425), .Y(n548) );
+  AND2x2_ASAP7_75t_R U656 ( .A(n550), .B(n551), .Y(n644) );
+  OR2x2_ASAP7_75t_R U657 ( .A(key[21]), .B(n453), .Y(n551) );
+  OR2x2_ASAP7_75t_R U658 ( .A(lfsr[5]), .B(n426), .Y(n550) );
+  AND2x2_ASAP7_75t_R U659 ( .A(n552), .B(n553), .Y(n645) );
+  OR2x2_ASAP7_75t_R U660 ( .A(key[20]), .B(n452), .Y(n553) );
+  OR2x2_ASAP7_75t_R U661 ( .A(lfsr[4]), .B(n427), .Y(n552) );
+  AND2x2_ASAP7_75t_R U662 ( .A(n554), .B(n555), .Y(n646) );
+  OR2x2_ASAP7_75t_R U663 ( .A(key[19]), .B(n451), .Y(n555) );
+  OR2x2_ASAP7_75t_R U664 ( .A(lfsr[3]), .B(n428), .Y(n554) );
+  AND2x2_ASAP7_75t_R U665 ( .A(n556), .B(n557), .Y(n647) );
+  OR2x2_ASAP7_75t_R U666 ( .A(key[18]), .B(n450), .Y(n557) );
+  OR2x2_ASAP7_75t_R U667 ( .A(lfsr[2]), .B(n429), .Y(n556) );
+  AND2x2_ASAP7_75t_R U668 ( .A(n558), .B(n559), .Y(n648) );
+  OR2x2_ASAP7_75t_R U669 ( .A(key[17]), .B(n449), .Y(n559) );
+  OR2x2_ASAP7_75t_R U670 ( .A(lfsr[1]), .B(n430), .Y(n558) );
+  AND2x2_ASAP7_75t_R U671 ( .A(n560), .B(n561), .Y(n649) );
+  OR2x2_ASAP7_75t_R U672 ( .A(key[16]), .B(n448), .Y(n561) );
+  OR2x2_ASAP7_75t_R U673 ( .A(lfsr[0]), .B(n431), .Y(n560) );
+  AND2x2_ASAP7_75t_R U674 ( .A(n562), .B(n563), .Y(n650) );
+  OR2x2_ASAP7_75t_R U675 ( .A(key[15]), .B(n465), .Y(n563) );
+  OR2x2_ASAP7_75t_R U676 ( .A(lfsr[15]), .B(n432), .Y(n562) );
+  AND2x2_ASAP7_75t_R U677 ( .A(n564), .B(n565), .Y(n651) );
+  OR2x2_ASAP7_75t_R U678 ( .A(key[14]), .B(n464), .Y(n565) );
+  OR2x2_ASAP7_75t_R U679 ( .A(lfsr[14]), .B(n433), .Y(n564) );
+  AND2x2_ASAP7_75t_R U680 ( .A(n566), .B(n567), .Y(n652) );
+  OR2x2_ASAP7_75t_R U681 ( .A(key[13]), .B(n463), .Y(n567) );
+  OR2x2_ASAP7_75t_R U682 ( .A(lfsr[13]), .B(n434), .Y(n566) );
+  AND2x2_ASAP7_75t_R U683 ( .A(n568), .B(n569), .Y(n653) );
+  OR2x2_ASAP7_75t_R U684 ( .A(key[12]), .B(n462), .Y(n569) );
+  OR2x2_ASAP7_75t_R U685 ( .A(lfsr[12]), .B(n435), .Y(n568) );
+  AND2x2_ASAP7_75t_R U686 ( .A(n570), .B(n571), .Y(n654) );
+  OR2x2_ASAP7_75t_R U687 ( .A(key[11]), .B(n461), .Y(n571) );
+  OR2x2_ASAP7_75t_R U688 ( .A(lfsr[11]), .B(n436), .Y(n570) );
+  AND2x2_ASAP7_75t_R U689 ( .A(n572), .B(n573), .Y(n655) );
+  OR2x2_ASAP7_75t_R U690 ( .A(key[10]), .B(n460), .Y(n573) );
+  OR2x2_ASAP7_75t_R U691 ( .A(lfsr[10]), .B(n437), .Y(n572) );
+  AND2x2_ASAP7_75t_R U692 ( .A(n574), .B(n575), .Y(n656) );
+  OR2x2_ASAP7_75t_R U693 ( .A(key[9]), .B(n457), .Y(n575) );
+  OR2x2_ASAP7_75t_R U694 ( .A(lfsr[9]), .B(n438), .Y(n574) );
+  AND2x2_ASAP7_75t_R U695 ( .A(n576), .B(n577), .Y(n657) );
+  OR2x2_ASAP7_75t_R U696 ( .A(key[8]), .B(n456), .Y(n577) );
+  OR2x2_ASAP7_75t_R U697 ( .A(lfsr[8]), .B(n439), .Y(n576) );
+  AND2x2_ASAP7_75t_R U698 ( .A(n578), .B(n579), .Y(n658) );
+  OR2x2_ASAP7_75t_R U699 ( .A(key[7]), .B(n455), .Y(n579) );
+  OR2x2_ASAP7_75t_R U700 ( .A(lfsr[7]), .B(n440), .Y(n578) );
+  AND2x2_ASAP7_75t_R U701 ( .A(n580), .B(n581), .Y(n659) );
+  OR2x2_ASAP7_75t_R U702 ( .A(key[6]), .B(n454), .Y(n581) );
+  OR2x2_ASAP7_75t_R U703 ( .A(lfsr[6]), .B(n441), .Y(n580) );
+  AND2x2_ASAP7_75t_R U704 ( .A(n582), .B(n583), .Y(n660) );
+  OR2x2_ASAP7_75t_R U705 ( .A(key[5]), .B(n453), .Y(n583) );
+  OR2x2_ASAP7_75t_R U706 ( .A(lfsr[5]), .B(n442), .Y(n582) );
+  AND2x2_ASAP7_75t_R U707 ( .A(n584), .B(n585), .Y(n661) );
+  OR2x2_ASAP7_75t_R U708 ( .A(key[4]), .B(n452), .Y(n585) );
+  OR2x2_ASAP7_75t_R U709 ( .A(lfsr[4]), .B(n443), .Y(n584) );
+  AND2x2_ASAP7_75t_R U710 ( .A(n586), .B(n587), .Y(n662) );
+  OR2x2_ASAP7_75t_R U711 ( .A(key[3]), .B(n451), .Y(n587) );
+  OR2x2_ASAP7_75t_R U712 ( .A(lfsr[3]), .B(n444), .Y(n586) );
+  AND2x2_ASAP7_75t_R U713 ( .A(n588), .B(n589), .Y(n663) );
+  OR2x2_ASAP7_75t_R U714 ( .A(key[2]), .B(n450), .Y(n589) );
+  OR2x2_ASAP7_75t_R U715 ( .A(lfsr[2]), .B(n445), .Y(n588) );
+  AND2x2_ASAP7_75t_R U716 ( .A(n590), .B(n591), .Y(n664) );
+  OR2x2_ASAP7_75t_R U717 ( .A(key[1]), .B(n449), .Y(n591) );
+  OR2x2_ASAP7_75t_R U718 ( .A(lfsr[1]), .B(n446), .Y(n590) );
+  AND2x2_ASAP7_75t_R U719 ( .A(n592), .B(n593), .Y(n665) );
+  OR2x2_ASAP7_75t_R U720 ( .A(key[0]), .B(n448), .Y(n593) );
+  OR2x2_ASAP7_75t_R U721 ( .A(lfsr[0]), .B(n447), .Y(n592) );
+  AND2x2_ASAP7_75t_R U722 ( .A(n594), .B(n458), .Y(n666) );
+  AND2x2_ASAP7_75t_R U723 ( .A(n459), .B(n596), .Y(n595) );
+  OR2x2_ASAP7_75t_R U724 ( .A(n596), .B(n459), .Y(n594) );
+  OR2x2_ASAP7_75t_R U725 ( .A(n598), .B(n599), .Y(n597) );
+  AND2x2_ASAP7_75t_R U726 ( .A(lfsr[10]), .B(n462), .Y(n599) );
+  AND2x2_ASAP7_75t_R U727 ( .A(lfsr[12]), .B(n460), .Y(n598) );
+  OR2x2_ASAP7_75t_R U728 ( .A(n600), .B(n601), .Y(n596) );
+  AND2x2_ASAP7_75t_R U729 ( .A(lfsr[13]), .B(n465), .Y(n601) );
+  AND2x2_ASAP7_75t_R U730 ( .A(lfsr[15]), .B(n463), .Y(n600) );
+  INVx2_ASAP7_75t_R U731 ( .A(rst), .Y(n667) );
+  INVx2_ASAP7_75t_R U732 ( .A(rst), .Y(n668) );
+  INVx2_ASAP7_75t_R U733 ( .A(rst), .Y(n669) );
+endmodule
+

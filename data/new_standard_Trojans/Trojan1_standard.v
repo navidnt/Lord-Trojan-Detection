@@ -1,0 +1,40 @@
+module top ( clk, rst, r1, trigger );
+input w_0, w_1, w_2;output w_3;wire w_4, w_5, w_6, w_7, w_8, w_9, w_10, w_11, w_12, w_13, w_14, w_15, w_16, w_17, w_18, w_19, w_20, w_21, w_22, w_23, w_24, w_25, w_26, w_27, w_28, w_29, w_30, w_31, w_32, w_33, w_34;wire    [2:0] w_35;
+
+dff g_1 ( .RN(1'b1), .SN(1'b1), .CK(w_0), .D(w_7), .Q(w_3) );
+dff g_2 ( .RN(1'b1), .SN(1'b1), .CK(w_0), .D(w_6), .Q(\u_trojan1/counter [2]) );
+dff g_3 ( .RN(1'b1), .SN(1'b1), .CK(w_0), .D(w_5), .Q(\u_trojan1/counter [1]) );
+dff g_4 ( .RN(1'b1), .SN(1'b1), .CK(w_0), .D(w_4), .Q(\u_trojan1/counter [0]) );
+not g_5 ( w_8, w_1 );
+not g_6 ( w_9, w_2 );
+nor g_7 ( w_4, w_10, w_11 );
+and g_8 ( w_11, \u_trojan1/counter [0], w_12 );
+nor g_9 ( w_10, w_13, w_9 );
+nor g_10 ( w_5, w_14, w_15 );
+nand g_11 ( w_15, w_16, w_17 );
+nand g_12 ( w_17, w_18, \u_trojan1/counter [1] );
+nor g_13 ( w_18, \u_trojan1/counter [0], w_8 );
+nand g_14 ( w_16, \u_trojan1/counter [1], w_12 );
+nor g_15 ( w_14, w_19, w_20 );
+nand g_16 ( w_20, w_2, \u_trojan1/counter [0] );
+or g_17 ( w_19, w_8, \u_trojan1/counter [1] );
+nor g_18 ( w_6, w_21, w_22 );
+nand g_19 ( w_22, w_23, w_24 );
+nand g_20 ( w_24, w_25, \u_trojan1/counter [2] );
+nor g_21 ( w_25, w_26, w_8 );
+nand g_22 ( w_23, \u_trojan1/counter [2], w_12 );
+and g_23 ( w_21, w_26, w_27 );
+nor g_24 ( w_27, w_9, \u_trojan1/counter [2] );
+nor g_25 ( w_7, w_28, w_29 );
+nand g_26 ( w_29, w_30, w_31 );
+nand g_27 ( w_31, w_32, w_3 );
+nor g_28 ( w_32, w_33, w_8 );
+nand g_29 ( w_30, w_3, w_12 );
+nor g_30 ( w_12, w_8, w_2 );
+and g_31 ( w_28, w_33, w_34 );
+nor g_32 ( w_34, w_9, w_3 );
+and g_33 ( w_33, w_26, \u_trojan1/counter [2] );
+and g_34 ( w_26, \u_trojan1/counter [1], w_13 );
+and g_35 ( w_13, \u_trojan1/counter [0], w_1 );
+endmodule
+

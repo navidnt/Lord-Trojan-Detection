@@ -1,0 +1,87 @@
+/////////////////////////////////////////////////////////////
+// Created by: Synopsys DC Expert(TM) in wire load mode
+// Version   : V-2023.12-SP5
+// Date      : Wed Jul  9 11:15:07 2025
+/////////////////////////////////////////////////////////////
+
+
+module top ( wb_addr_i, wb_data_i, s0_data_i, slv_sel );
+  input [31:0] wb_addr_i;
+  input [31:0] wb_data_i;
+  input [31:0] s0_data_i;
+  output [3:0] slv_sel;
+  wire   n64, n65, n66, n67, n68, n69, n70, n71, n72, n73, n74, n75, n76, n77,
+         n78, n79, n80, n81, n82, n83, n84, n85, n86, n87, n88, n89, n90, n91,
+         n92, n93, n94, n95, n96, n97, n98, n99, n100, n101, n102, n103, n104,
+         n105, n106, n107, n108, n109, n110, n111, n112, n113, n114, n115,
+         n116, n117, n118, n119, n120, n121, n122, n123, n124, n125, n126;
+
+  XOR2x1_ASAP7_75t_R U68 ( .A(wb_addr_i[31]), .B(n64), .Y(slv_sel[3]) );
+  XOR2x1_ASAP7_75t_R U69 ( .A(wb_addr_i[30]), .B(n64), .Y(slv_sel[2]) );
+  XOR2x1_ASAP7_75t_R U70 ( .A(wb_addr_i[29]), .B(n64), .Y(slv_sel[1]) );
+  XOR2x1_ASAP7_75t_R U71 ( .A(wb_addr_i[28]), .B(n64), .Y(slv_sel[0]) );
+  NOR2x1_ASAP7_75t_R U72 ( .A(n65), .B(n66), .Y(n64) );
+  NAND2x1_ASAP7_75t_R U73 ( .A(n67), .B(n68), .Y(n66) );
+  NOR2x1_ASAP7_75t_R U74 ( .A(n69), .B(n70), .Y(n68) );
+  NAND2x1_ASAP7_75t_R U75 ( .A(n71), .B(n72), .Y(n70) );
+  NOR2x1_ASAP7_75t_R U76 ( .A(n73), .B(n74), .Y(n72) );
+  NAND2x1_ASAP7_75t_R U77 ( .A(s0_data_i[3]), .B(s0_data_i[2]), .Y(n74) );
+  NAND2x1_ASAP7_75t_R U78 ( .A(s0_data_i[28]), .B(s0_data_i[27]), .Y(n73) );
+  NOR2x1_ASAP7_75t_R U79 ( .A(n75), .B(n76), .Y(n71) );
+  NAND2x1_ASAP7_75t_R U80 ( .A(wb_data_i[10]), .B(s0_data_i[9]), .Y(n76) );
+  NAND2x1_ASAP7_75t_R U81 ( .A(s0_data_i[7]), .B(s0_data_i[5]), .Y(n75) );
+  NAND2x1_ASAP7_75t_R U82 ( .A(n77), .B(n78), .Y(n69) );
+  NOR2x1_ASAP7_75t_R U83 ( .A(n79), .B(n80), .Y(n78) );
+  NAND2x1_ASAP7_75t_R U84 ( .A(s0_data_i[18]), .B(s0_data_i[16]), .Y(n80) );
+  NAND2x1_ASAP7_75t_R U85 ( .A(s0_data_i[14]), .B(s0_data_i[12]), .Y(n79) );
+  NOR2x1_ASAP7_75t_R U86 ( .A(n81), .B(n82), .Y(n77) );
+  NAND2x1_ASAP7_75t_R U87 ( .A(s0_data_i[26]), .B(s0_data_i[25]), .Y(n82) );
+  NAND2x1_ASAP7_75t_R U88 ( .A(s0_data_i[22]), .B(s0_data_i[20]), .Y(n81) );
+  NOR2x1_ASAP7_75t_R U89 ( .A(n83), .B(n84), .Y(n67) );
+  NAND2x1_ASAP7_75t_R U90 ( .A(n85), .B(n86), .Y(n84) );
+  NOR2x1_ASAP7_75t_R U91 ( .A(n87), .B(n88), .Y(n86) );
+  NAND2x1_ASAP7_75t_R U92 ( .A(wb_data_i[27]), .B(wb_data_i[25]), .Y(n88) );
+  NAND2x1_ASAP7_75t_R U93 ( .A(wb_data_i[23]), .B(wb_data_i[22]), .Y(n87) );
+  NOR2x1_ASAP7_75t_R U94 ( .A(n89), .B(n90), .Y(n85) );
+  NAND2x1_ASAP7_75t_R U95 ( .A(wb_data_i[7]), .B(wb_data_i[6]), .Y(n90) );
+  NAND2x1_ASAP7_75t_R U96 ( .A(wb_data_i[5]), .B(wb_data_i[29]), .Y(n89) );
+  NAND2x1_ASAP7_75t_R U97 ( .A(n91), .B(n92), .Y(n83) );
+  NOR2x1_ASAP7_75t_R U98 ( .A(n93), .B(n94), .Y(n92) );
+  NAND2x1_ASAP7_75t_R U99 ( .A(wb_data_i[15]), .B(wb_data_i[13]), .Y(n94) );
+  NAND2x1_ASAP7_75t_R U100 ( .A(wb_data_i[12]), .B(wb_data_i[11]), .Y(n93) );
+  NOR2x1_ASAP7_75t_R U101 ( .A(n95), .B(n96), .Y(n91) );
+  NAND2x1_ASAP7_75t_R U102 ( .A(wb_data_i[21]), .B(wb_data_i[20]), .Y(n96) );
+  NAND2x1_ASAP7_75t_R U103 ( .A(wb_data_i[19]), .B(wb_data_i[17]), .Y(n95) );
+  NAND2x1_ASAP7_75t_R U104 ( .A(n97), .B(n98), .Y(n65) );
+  NOR2x1_ASAP7_75t_R U105 ( .A(n99), .B(n100), .Y(n98) );
+  NAND2x1_ASAP7_75t_R U106 ( .A(n101), .B(n102), .Y(n100) );
+  AND2x2_ASAP7_75t_R U107 ( .A(n103), .B(n104), .Y(n102) );
+  NOR2x1_ASAP7_75t_R U108 ( .A(wb_data_i[26]), .B(wb_data_i[24]), .Y(n104) );
+  NOR2x1_ASAP7_75t_R U109 ( .A(wb_data_i[1]), .B(wb_data_i[18]), .Y(n103) );
+  AND2x2_ASAP7_75t_R U110 ( .A(n105), .B(n106), .Y(n101) );
+  NOR2x1_ASAP7_75t_R U111 ( .A(wb_data_i[16]), .B(wb_data_i[14]), .Y(n106) );
+  NOR2x1_ASAP7_75t_R U112 ( .A(wb_data_i[0]), .B(s0_data_i[8]), .Y(n105) );
+  NAND2x1_ASAP7_75t_R U113 ( .A(n107), .B(n108), .Y(n99) );
+  AND2x2_ASAP7_75t_R U114 ( .A(n109), .B(n110), .Y(n108) );
+  NOR2x1_ASAP7_75t_R U115 ( .A(wb_data_i[9]), .B(wb_data_i[8]), .Y(n110) );
+  NOR2x1_ASAP7_75t_R U116 ( .A(wb_data_i[4]), .B(wb_data_i[3]), .Y(n109) );
+  AND2x2_ASAP7_75t_R U117 ( .A(n111), .B(n112), .Y(n107) );
+  NOR2x1_ASAP7_75t_R U118 ( .A(wb_data_i[31]), .B(wb_data_i[30]), .Y(n112) );
+  NOR2x1_ASAP7_75t_R U119 ( .A(wb_data_i[2]), .B(wb_data_i[28]), .Y(n111) );
+  NOR2x1_ASAP7_75t_R U120 ( .A(n113), .B(n114), .Y(n97) );
+  NAND2x1_ASAP7_75t_R U121 ( .A(n115), .B(n116), .Y(n114) );
+  AND2x2_ASAP7_75t_R U122 ( .A(n117), .B(n118), .Y(n116) );
+  NOR2x1_ASAP7_75t_R U123 ( .A(s0_data_i[1]), .B(s0_data_i[19]), .Y(n118) );
+  NOR2x1_ASAP7_75t_R U124 ( .A(s0_data_i[17]), .B(s0_data_i[15]), .Y(n117) );
+  AND2x2_ASAP7_75t_R U125 ( .A(n119), .B(n120), .Y(n115) );
+  NOR2x1_ASAP7_75t_R U126 ( .A(s0_data_i[13]), .B(s0_data_i[11]), .Y(n120) );
+  NOR2x1_ASAP7_75t_R U127 ( .A(s0_data_i[10]), .B(s0_data_i[0]), .Y(n119) );
+  NAND2x1_ASAP7_75t_R U128 ( .A(n121), .B(n122), .Y(n113) );
+  AND2x2_ASAP7_75t_R U129 ( .A(n123), .B(n124), .Y(n122) );
+  NOR2x1_ASAP7_75t_R U130 ( .A(s0_data_i[6]), .B(s0_data_i[4]), .Y(n124) );
+  NOR2x1_ASAP7_75t_R U131 ( .A(s0_data_i[31]), .B(s0_data_i[30]), .Y(n123) );
+  AND2x2_ASAP7_75t_R U132 ( .A(n125), .B(n126), .Y(n121) );
+  NOR2x1_ASAP7_75t_R U133 ( .A(s0_data_i[29]), .B(s0_data_i[24]), .Y(n126) );
+  NOR2x1_ASAP7_75t_R U134 ( .A(s0_data_i[23]), .B(s0_data_i[21]), .Y(n125) );
+endmodule
+

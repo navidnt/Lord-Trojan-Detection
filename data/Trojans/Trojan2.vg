@@ -1,0 +1,95 @@
+/////////////////////////////////////////////////////////////
+// Created by: Synopsys DC Expert(TM) in wire load mode
+// Version   : V-2023.12-SP5
+// Date      : Tue May 27 23:12:46 2025
+/////////////////////////////////////////////////////////////
+
+
+module Trojan2 ( clk, rst, data_in, force_reset );
+  input [7:0] data_in;
+  input clk, rst;
+  output force_reset;
+  wire   n35, n36, n37, n38, n39, n40, n41, n42, n43, n44, n45, n46, n47, n48,
+         n49, n50, n51, n52, n53, n54, n55, n56, n57, n58, n59, n60, n61, n62,
+         n63, n64, n65, n66, n67, n68, n69, n70, n71, n72, n73, n74, n75, n76,
+         n77, n78, n79, n80, n81, n82, n83, n84, n85, n86, n87, n88, n89, n90,
+         n91;
+  wire   [7:0] prev_data;
+
+  DFFASRHQNx1_ASAP7_75t_R \prev_data_reg[7]  ( .D(n89), .CLK(clk), .SETN(n35), 
+        .RESETN(1'b1), .QN(prev_data[7]) );
+  DFFASRHQNx1_ASAP7_75t_R \prev_data_reg[6]  ( .D(n85), .CLK(clk), .SETN(n35), 
+        .RESETN(1'b1), .QN(prev_data[6]) );
+  DFFASRHQNx1_ASAP7_75t_R \prev_data_reg[5]  ( .D(n81), .CLK(clk), .SETN(n35), 
+        .RESETN(1'b1), .QN(prev_data[5]) );
+  DFFASRHQNx1_ASAP7_75t_R \prev_data_reg[4]  ( .D(n77), .CLK(clk), .SETN(n35), 
+        .RESETN(1'b1), .QN(prev_data[4]) );
+  DFFASRHQNx1_ASAP7_75t_R \prev_data_reg[3]  ( .D(n73), .CLK(clk), .SETN(n35), 
+        .RESETN(1'b1), .QN(prev_data[3]) );
+  DFFASRHQNx1_ASAP7_75t_R \prev_data_reg[2]  ( .D(n69), .CLK(clk), .SETN(n35), 
+        .RESETN(1'b1), .QN(prev_data[2]) );
+  DFFASRHQNx1_ASAP7_75t_R \prev_data_reg[1]  ( .D(n65), .CLK(clk), .SETN(n35), 
+        .RESETN(1'b1), .QN(prev_data[1]) );
+  DFFASRHQNx1_ASAP7_75t_R \prev_data_reg[0]  ( .D(n61), .CLK(clk), .SETN(n35), 
+        .RESETN(1'b1), .QN(prev_data[0]) );
+  DFFASRHQNx1_ASAP7_75t_R force_reset_reg ( .D(n59), .CLK(clk), .SETN(n35), 
+        .RESETN(1'b1), .QN(force_reset) );
+  INVx2_ASAP7_75t_R U38 ( .A(rst), .Y(n35) );
+  INVx2_ASAP7_75t_R U39 ( .A(data_in[7]), .Y(n36) );
+  INVx2_ASAP7_75t_R U40 ( .A(n46), .Y(n37) );
+  INVx2_ASAP7_75t_R U41 ( .A(data_in[6]), .Y(n38) );
+  INVx2_ASAP7_75t_R U42 ( .A(data_in[5]), .Y(n39) );
+  INVx2_ASAP7_75t_R U43 ( .A(data_in[4]), .Y(n40) );
+  INVx2_ASAP7_75t_R U44 ( .A(data_in[3]), .Y(n41) );
+  INVx2_ASAP7_75t_R U45 ( .A(data_in[2]), .Y(n42) );
+  INVx2_ASAP7_75t_R U46 ( .A(data_in[1]), .Y(n43) );
+  INVx2_ASAP7_75t_R U47 ( .A(data_in[0]), .Y(n44) );
+  OR2x2_ASAP7_75t_R U48 ( .A(n45), .B(n37), .Y(n59) );
+  AND2x2_ASAP7_75t_R U49 ( .A(n47), .B(n48), .Y(n46) );
+  AND2x2_ASAP7_75t_R U50 ( .A(n49), .B(n50), .Y(n48) );
+  AND2x2_ASAP7_75t_R U51 ( .A(data_in[4]), .B(data_in[6]), .Y(n50) );
+  AND2x2_ASAP7_75t_R U52 ( .A(data_in[0]), .B(data_in[2]), .Y(n49) );
+  AND2x2_ASAP7_75t_R U53 ( .A(n51), .B(n52), .Y(n47) );
+  AND2x2_ASAP7_75t_R U54 ( .A(prev_data[3]), .B(prev_data[1]), .Y(n52) );
+  AND2x2_ASAP7_75t_R U55 ( .A(prev_data[7]), .B(prev_data[5]), .Y(n51) );
+  OR2x2_ASAP7_75t_R U56 ( .A(n53), .B(n54), .Y(n45) );
+  OR2x2_ASAP7_75t_R U57 ( .A(n55), .B(n56), .Y(n54) );
+  OR2x2_ASAP7_75t_R U58 ( .A(data_in[3]), .B(data_in[1]), .Y(n56) );
+  OR2x2_ASAP7_75t_R U59 ( .A(data_in[7]), .B(data_in[5]), .Y(n55) );
+  OR2x2_ASAP7_75t_R U60 ( .A(n57), .B(n58), .Y(n53) );
+  OR2x2_ASAP7_75t_R U61 ( .A(prev_data[2]), .B(prev_data[0]), .Y(n58) );
+  OR2x2_ASAP7_75t_R U62 ( .A(prev_data[6]), .B(prev_data[4]), .Y(n57) );
+  INVx2_ASAP7_75t_R U63 ( .A(n63), .Y(n60) );
+  INVx2_ASAP7_75t_R U64 ( .A(n60), .Y(n61) );
+  INVx2_ASAP7_75t_R U65 ( .A(n44), .Y(n62) );
+  INVx2_ASAP7_75t_R U66 ( .A(n62), .Y(n63) );
+  INVx2_ASAP7_75t_R U67 ( .A(n67), .Y(n64) );
+  INVx2_ASAP7_75t_R U68 ( .A(n64), .Y(n65) );
+  INVx2_ASAP7_75t_R U69 ( .A(n43), .Y(n66) );
+  INVx2_ASAP7_75t_R U70 ( .A(n66), .Y(n67) );
+  INVx2_ASAP7_75t_R U71 ( .A(n71), .Y(n68) );
+  INVx2_ASAP7_75t_R U72 ( .A(n68), .Y(n69) );
+  INVx2_ASAP7_75t_R U73 ( .A(n42), .Y(n70) );
+  INVx2_ASAP7_75t_R U74 ( .A(n70), .Y(n71) );
+  INVx2_ASAP7_75t_R U75 ( .A(n75), .Y(n72) );
+  INVx2_ASAP7_75t_R U76 ( .A(n72), .Y(n73) );
+  INVx2_ASAP7_75t_R U77 ( .A(n41), .Y(n74) );
+  INVx2_ASAP7_75t_R U78 ( .A(n74), .Y(n75) );
+  INVx2_ASAP7_75t_R U79 ( .A(n79), .Y(n76) );
+  INVx2_ASAP7_75t_R U80 ( .A(n76), .Y(n77) );
+  INVx2_ASAP7_75t_R U81 ( .A(n40), .Y(n78) );
+  INVx2_ASAP7_75t_R U82 ( .A(n78), .Y(n79) );
+  INVx2_ASAP7_75t_R U83 ( .A(n83), .Y(n80) );
+  INVx2_ASAP7_75t_R U84 ( .A(n80), .Y(n81) );
+  INVx2_ASAP7_75t_R U85 ( .A(n39), .Y(n82) );
+  INVx2_ASAP7_75t_R U86 ( .A(n82), .Y(n83) );
+  INVx2_ASAP7_75t_R U87 ( .A(n87), .Y(n84) );
+  INVx2_ASAP7_75t_R U88 ( .A(n84), .Y(n85) );
+  INVx2_ASAP7_75t_R U89 ( .A(n38), .Y(n86) );
+  INVx2_ASAP7_75t_R U90 ( .A(n86), .Y(n87) );
+  INVx2_ASAP7_75t_R U91 ( .A(n91), .Y(n88) );
+  INVx2_ASAP7_75t_R U92 ( .A(n88), .Y(n89) );
+  INVx2_ASAP7_75t_R U93 ( .A(n36), .Y(n90) );
+  INVx2_ASAP7_75t_R U94 ( .A(n90), .Y(n91) );
+endmodule
+

@@ -1,0 +1,6 @@
+Each result file serves as the reference answer and includes the trojan gate for its corresponding design:
+
+For example:
+- result0.txt -> Reference answer for design0.v
+- result1.txt -> Reference answer for design1.v
+- ...

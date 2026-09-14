@@ -1,0 +1,412 @@
+/////////////////////////////////////////////////////////////
+// Created by: Synopsys DC Expert(TM) in wire load mode
+// Version   : V-2023.12-SP5
+// Date      : Wed Jul  9 11:09:00 2025
+/////////////////////////////////////////////////////////////
+
+
+module top ( clk, rst, key, leak );
+  input [63:0] key;
+  output [63:0] leak;
+  input clk, rst;
+  wire   \u_trojan4/n160 , \u_trojan4/n127 , \u_trojan4/n125 ,
+         \u_trojan4/n123 , \u_trojan4/n121 , \u_trojan4/n119 ,
+         \u_trojan4/n117 , \u_trojan4/n115 , \u_trojan4/n113 ,
+         \u_trojan4/n111 , \u_trojan4/n109 , \u_trojan4/n107 ,
+         \u_trojan4/n105 , \u_trojan4/n103 , \u_trojan4/n101 , \u_trojan4/n99 ,
+         \u_trojan4/n97 , \u_trojan4/n95 , \u_trojan4/n93 , \u_trojan4/n91 ,
+         \u_trojan4/n89 , \u_trojan4/n87 , \u_trojan4/n85 , \u_trojan4/n83 ,
+         \u_trojan4/n81 , \u_trojan4/n79 , \u_trojan4/n77 , \u_trojan4/n75 ,
+         \u_trojan4/n73 , \u_trojan4/n71 , \u_trojan4/n69 , \u_trojan4/n67 ,
+         \u_trojan4/n65 , \u_trojan4/n63 , \u_trojan4/n61 , \u_trojan4/n59 ,
+         \u_trojan4/n57 , \u_trojan4/n55 , \u_trojan4/n53 , \u_trojan4/n51 ,
+         \u_trojan4/n49 , \u_trojan4/n47 , \u_trojan4/n45 , \u_trojan4/n43 ,
+         \u_trojan4/n41 , \u_trojan4/n39 , \u_trojan4/n37 , \u_trojan4/n35 ,
+         \u_trojan4/n33 , \u_trojan4/n31 , \u_trojan4/n29 , \u_trojan4/n27 ,
+         \u_trojan4/n25 , \u_trojan4/n23 , \u_trojan4/n21 , \u_trojan4/n19 ,
+         \u_trojan4/n17 , \u_trojan4/n15 , \u_trojan4/n13 , \u_trojan4/n11 ,
+         \u_trojan4/n9 , \u_trojan4/n7 , \u_trojan4/n5 , \u_trojan4/n3 ,
+         \u_trojan4/n1 , n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12,
+         n13, n14, n15, n16, n17, n18, n19, n20, n21, n22, n23, n24, n25, n26,
+         n27, n28, n29, n30, n31, n32, n33, n34, n35, n36, n37, n38, n39, n40,
+         n41, n42, n43, n44, n45, n46, n47, n48, n49, n50, n51, n52, n53, n54,
+         n55, n56, n57, n58, n59, n60, n61, n62, n63, n64, n65, n66, n67, n68,
+         n69, n70, n71, n72, n73, n74, n75, n76, n77, n78, n79, n80, n81, n82,
+         n83;
+  wire   [15:0] \u_trojan4/lfsr ;
+
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[0]  ( .D(n82), .CLK(clk), .SETN(
+        n1), .RESETN(1'b1), .QN(leak[0]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[1]  ( .D(n81), .CLK(clk), .SETN(
+        n1), .RESETN(1'b1), .QN(leak[1]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[2]  ( .D(n80), .CLK(clk), .SETN(
+        n1), .RESETN(1'b1), .QN(leak[2]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[3]  ( .D(n79), .CLK(clk), .SETN(
+        n1), .RESETN(1'b1), .QN(leak[3]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[4]  ( .D(n78), .CLK(clk), .SETN(
+        n1), .RESETN(1'b1), .QN(leak[4]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[5]  ( .D(n77), .CLK(clk), .SETN(
+        n1), .RESETN(1'b1), .QN(leak[5]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[6]  ( .D(n76), .CLK(clk), .SETN(
+        n1), .RESETN(1'b1), .QN(leak[6]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[7]  ( .D(n75), .CLK(clk), .SETN(
+        n1), .RESETN(1'b1), .QN(leak[7]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[8]  ( .D(n74), .CLK(clk), .SETN(
+        n1), .RESETN(1'b1), .QN(leak[8]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[9]  ( .D(n73), .CLK(clk), .SETN(
+        n1), .RESETN(1'b1), .QN(leak[9]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[10]  ( .D(n72), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[10]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[11]  ( .D(n71), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[11]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[12]  ( .D(n70), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[12]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[13]  ( .D(n69), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[13]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[14]  ( .D(n68), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[14]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[15]  ( .D(n67), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[15]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[16]  ( .D(n66), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[16]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[17]  ( .D(n65), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[17]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[18]  ( .D(n64), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[18]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[19]  ( .D(n63), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[19]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[20]  ( .D(n62), .CLK(clk), 
+        .SETN(n83), .RESETN(1'b1), .QN(leak[20]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[21]  ( .D(n61), .CLK(clk), 
+        .SETN(n83), .RESETN(1'b1), .QN(leak[21]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[22]  ( .D(n60), .CLK(clk), 
+        .SETN(n83), .RESETN(1'b1), .QN(leak[22]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[23]  ( .D(n59), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[23]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[24]  ( .D(n58), .CLK(clk), 
+        .SETN(n83), .RESETN(1'b1), .QN(leak[24]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[25]  ( .D(n57), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[25]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[26]  ( .D(n56), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[26]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[27]  ( .D(n55), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[27]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[28]  ( .D(n54), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[28]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[29]  ( .D(n53), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[29]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[30]  ( .D(n52), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[30]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[31]  ( .D(n51), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[31]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[32]  ( .D(n50), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[32]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[33]  ( .D(n49), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[33]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[34]  ( .D(n48), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[34]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[35]  ( .D(n47), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[35]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[36]  ( .D(n46), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[36]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[37]  ( .D(n45), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[37]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[38]  ( .D(n44), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[38]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[39]  ( .D(n43), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[39]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[40]  ( .D(n42), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[40]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[41]  ( .D(n41), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[41]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[42]  ( .D(n40), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[42]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[43]  ( .D(n39), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[43]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[44]  ( .D(n38), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[44]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[45]  ( .D(n37), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[45]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[46]  ( .D(n36), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[46]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[47]  ( .D(n35), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[47]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[48]  ( .D(n34), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[48]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[49]  ( .D(n33), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[49]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[50]  ( .D(n32), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[50]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[51]  ( .D(n31), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[51]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[52]  ( .D(n30), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[52]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[53]  ( .D(n29), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[53]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[54]  ( .D(n28), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[54]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[55]  ( .D(n27), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[55]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[56]  ( .D(n26), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[56]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[57]  ( .D(n25), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[57]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[58]  ( .D(n24), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[58]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[59]  ( .D(n23), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[59]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[60]  ( .D(n22), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[60]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[61]  ( .D(n21), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[61]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[62]  ( .D(n20), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[62]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/leak_reg[63]  ( .D(n19), .CLK(clk), 
+        .SETN(n1), .RESETN(1'b1), .QN(leak[63]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/lfsr_reg[15]  ( .D(n2), .CLK(clk), .SETN(
+        1'b1), .RESETN(n83), .QN(\u_trojan4/lfsr [15]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/lfsr_reg[14]  ( .D(n3), .CLK(clk), .SETN(
+        1'b1), .RESETN(n83), .QN(\u_trojan4/lfsr [14]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/lfsr_reg[13]  ( .D(n4), .CLK(clk), .SETN(
+        n1), .RESETN(1'b1), .QN(\u_trojan4/lfsr [13]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/lfsr_reg[12]  ( .D(n5), .CLK(clk), .SETN(
+        1'b1), .RESETN(n83), .QN(\u_trojan4/lfsr [12]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/lfsr_reg[11]  ( .D(n6), .CLK(clk), .SETN(
+        1'b1), .RESETN(n83), .QN(\u_trojan4/lfsr [11]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/lfsr_reg[10]  ( .D(n7), .CLK(clk), .SETN(
+        1'b1), .RESETN(n83), .QN(\u_trojan4/lfsr [10]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/lfsr_reg[9]  ( .D(n8), .CLK(clk), .SETN(
+        1'b1), .RESETN(n83), .QN(\u_trojan4/lfsr [9]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/lfsr_reg[8]  ( .D(n9), .CLK(clk), .SETN(
+        n1), .RESETN(1'b1), .QN(\u_trojan4/lfsr [8]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/lfsr_reg[7]  ( .D(n10), .CLK(clk), .SETN(
+        1'b1), .RESETN(n83), .QN(\u_trojan4/lfsr [7]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/lfsr_reg[6]  ( .D(n11), .CLK(clk), .SETN(
+        n1), .RESETN(1'b1), .QN(\u_trojan4/lfsr [6]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/lfsr_reg[5]  ( .D(n12), .CLK(clk), .SETN(
+        1'b1), .RESETN(n83), .QN(\u_trojan4/lfsr [5]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/lfsr_reg[4]  ( .D(n13), .CLK(clk), .SETN(
+        n1), .RESETN(1'b1), .QN(\u_trojan4/lfsr [4]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/lfsr_reg[3]  ( .D(n14), .CLK(clk), .SETN(
+        1'b1), .RESETN(n83), .QN(\u_trojan4/lfsr [3]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/lfsr_reg[2]  ( .D(n15), .CLK(clk), .SETN(
+        1'b1), .RESETN(n83), .QN(\u_trojan4/lfsr [2]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/lfsr_reg[1]  ( .D(n16), .CLK(clk), .SETN(
+        n1), .RESETN(1'b1), .QN(\u_trojan4/lfsr [1]) );
+  DFFASRHQNx1_ASAP7_75t_R \u_trojan4/lfsr_reg[0]  ( .D(\u_trojan4/n1 ), .CLK(
+        clk), .SETN(1'b1), .RESETN(n83), .QN(\u_trojan4/lfsr [0]) );
+  INVx2_ASAP7_75t_R U1 ( .A(rst), .Y(n1) );
+  INVx2_ASAP7_75t_R U2 ( .A(\u_trojan4/lfsr [14]), .Y(n2) );
+  INVx2_ASAP7_75t_R U3 ( .A(\u_trojan4/lfsr [13]), .Y(n3) );
+  INVx2_ASAP7_75t_R U4 ( .A(\u_trojan4/lfsr [12]), .Y(n4) );
+  INVx2_ASAP7_75t_R U5 ( .A(\u_trojan4/lfsr [11]), .Y(n5) );
+  INVx2_ASAP7_75t_R U6 ( .A(\u_trojan4/lfsr [10]), .Y(n6) );
+  INVx2_ASAP7_75t_R U7 ( .A(\u_trojan4/lfsr [9]), .Y(n7) );
+  INVx2_ASAP7_75t_R U8 ( .A(\u_trojan4/lfsr [8]), .Y(n8) );
+  INVx2_ASAP7_75t_R U9 ( .A(\u_trojan4/lfsr [7]), .Y(n9) );
+  INVx2_ASAP7_75t_R U10 ( .A(\u_trojan4/lfsr [6]), .Y(n10) );
+  INVx2_ASAP7_75t_R U11 ( .A(\u_trojan4/lfsr [5]), .Y(n11) );
+  INVx2_ASAP7_75t_R U12 ( .A(\u_trojan4/lfsr [4]), .Y(n12) );
+  INVx2_ASAP7_75t_R U13 ( .A(\u_trojan4/lfsr [3]), .Y(n13) );
+  INVx2_ASAP7_75t_R U14 ( .A(\u_trojan4/lfsr [2]), .Y(n14) );
+  INVx2_ASAP7_75t_R U15 ( .A(\u_trojan4/lfsr [1]), .Y(n15) );
+  INVx2_ASAP7_75t_R U16 ( .A(\u_trojan4/lfsr [0]), .Y(n16) );
+  XNOR2x1_ASAP7_75t_R U17 ( .A(\u_trojan4/lfsr [8]), .B(key[40]), .Y(
+        \u_trojan4/n99 ) );
+  XNOR2x1_ASAP7_75t_R U18 ( .A(\u_trojan4/lfsr [7]), .B(key[39]), .Y(
+        \u_trojan4/n97 ) );
+  XNOR2x1_ASAP7_75t_R U19 ( .A(\u_trojan4/lfsr [6]), .B(key[38]), .Y(
+        \u_trojan4/n95 ) );
+  XNOR2x1_ASAP7_75t_R U20 ( .A(\u_trojan4/lfsr [5]), .B(key[37]), .Y(
+        \u_trojan4/n93 ) );
+  XNOR2x1_ASAP7_75t_R U21 ( .A(\u_trojan4/lfsr [4]), .B(key[36]), .Y(
+        \u_trojan4/n91 ) );
+  XNOR2x1_ASAP7_75t_R U22 ( .A(\u_trojan4/lfsr [4]), .B(key[4]), .Y(
+        \u_trojan4/n9 ) );
+  XNOR2x1_ASAP7_75t_R U23 ( .A(\u_trojan4/lfsr [3]), .B(key[35]), .Y(
+        \u_trojan4/n89 ) );
+  XNOR2x1_ASAP7_75t_R U24 ( .A(\u_trojan4/lfsr [2]), .B(key[34]), .Y(
+        \u_trojan4/n87 ) );
+  XNOR2x1_ASAP7_75t_R U25 ( .A(\u_trojan4/lfsr [1]), .B(key[33]), .Y(
+        \u_trojan4/n85 ) );
+  XNOR2x1_ASAP7_75t_R U26 ( .A(\u_trojan4/lfsr [0]), .B(key[32]), .Y(
+        \u_trojan4/n83 ) );
+  XNOR2x1_ASAP7_75t_R U27 ( .A(\u_trojan4/lfsr [14]), .B(key[30]), .Y(
+        \u_trojan4/n81 ) );
+  XNOR2x1_ASAP7_75t_R U28 ( .A(\u_trojan4/lfsr [11]), .B(key[27]), .Y(
+        \u_trojan4/n79 ) );
+  XNOR2x1_ASAP7_75t_R U29 ( .A(\u_trojan4/lfsr [9]), .B(key[25]), .Y(
+        \u_trojan4/n77 ) );
+  XNOR2x1_ASAP7_75t_R U30 ( .A(\u_trojan4/lfsr [8]), .B(key[24]), .Y(
+        \u_trojan4/n75 ) );
+  XNOR2x1_ASAP7_75t_R U31 ( .A(\u_trojan4/lfsr [7]), .B(key[23]), .Y(
+        \u_trojan4/n73 ) );
+  XNOR2x1_ASAP7_75t_R U32 ( .A(\u_trojan4/lfsr [6]), .B(key[22]), .Y(
+        \u_trojan4/n71 ) );
+  XNOR2x1_ASAP7_75t_R U33 ( .A(\u_trojan4/lfsr [3]), .B(key[3]), .Y(
+        \u_trojan4/n7 ) );
+  XNOR2x1_ASAP7_75t_R U34 ( .A(\u_trojan4/lfsr [5]), .B(key[21]), .Y(
+        \u_trojan4/n69 ) );
+  XNOR2x1_ASAP7_75t_R U35 ( .A(\u_trojan4/lfsr [4]), .B(key[20]), .Y(
+        \u_trojan4/n67 ) );
+  XNOR2x1_ASAP7_75t_R U36 ( .A(\u_trojan4/lfsr [3]), .B(key[19]), .Y(
+        \u_trojan4/n65 ) );
+  XNOR2x1_ASAP7_75t_R U37 ( .A(\u_trojan4/lfsr [2]), .B(key[18]), .Y(
+        \u_trojan4/n63 ) );
+  XNOR2x1_ASAP7_75t_R U38 ( .A(\u_trojan4/lfsr [1]), .B(key[17]), .Y(
+        \u_trojan4/n61 ) );
+  XNOR2x1_ASAP7_75t_R U39 ( .A(\u_trojan4/lfsr [0]), .B(key[16]), .Y(
+        \u_trojan4/n59 ) );
+  XNOR2x1_ASAP7_75t_R U40 ( .A(\u_trojan4/lfsr [14]), .B(key[14]), .Y(
+        \u_trojan4/n57 ) );
+  XNOR2x1_ASAP7_75t_R U41 ( .A(\u_trojan4/lfsr [11]), .B(key[11]), .Y(
+        \u_trojan4/n55 ) );
+  XNOR2x1_ASAP7_75t_R U42 ( .A(\u_trojan4/lfsr [9]), .B(key[9]), .Y(
+        \u_trojan4/n53 ) );
+  XNOR2x1_ASAP7_75t_R U43 ( .A(\u_trojan4/lfsr [8]), .B(key[8]), .Y(
+        \u_trojan4/n51 ) );
+  XNOR2x1_ASAP7_75t_R U44 ( .A(\u_trojan4/lfsr [2]), .B(key[2]), .Y(
+        \u_trojan4/n5 ) );
+  XNOR2x1_ASAP7_75t_R U45 ( .A(\u_trojan4/lfsr [7]), .B(key[7]), .Y(
+        \u_trojan4/n49 ) );
+  XNOR2x1_ASAP7_75t_R U46 ( .A(\u_trojan4/lfsr [6]), .B(key[6]), .Y(
+        \u_trojan4/n47 ) );
+  XNOR2x1_ASAP7_75t_R U47 ( .A(\u_trojan4/lfsr [5]), .B(key[5]), .Y(
+        \u_trojan4/n45 ) );
+  XNOR2x1_ASAP7_75t_R U48 ( .A(\u_trojan4/lfsr [0]), .B(key[0]), .Y(
+        \u_trojan4/n43 ) );
+  XNOR2x1_ASAP7_75t_R U49 ( .A(\u_trojan4/lfsr [15]), .B(key[63]), .Y(
+        \u_trojan4/n41 ) );
+  XNOR2x1_ASAP7_75t_R U50 ( .A(\u_trojan4/lfsr [15]), .B(key[47]), .Y(
+        \u_trojan4/n39 ) );
+  XNOR2x1_ASAP7_75t_R U51 ( .A(\u_trojan4/lfsr [15]), .B(key[31]), .Y(
+        \u_trojan4/n37 ) );
+  XNOR2x1_ASAP7_75t_R U52 ( .A(\u_trojan4/lfsr [15]), .B(key[15]), .Y(
+        \u_trojan4/n35 ) );
+  XNOR2x1_ASAP7_75t_R U53 ( .A(\u_trojan4/lfsr [13]), .B(key[61]), .Y(
+        \u_trojan4/n33 ) );
+  XNOR2x1_ASAP7_75t_R U54 ( .A(\u_trojan4/lfsr [10]), .B(key[58]), .Y(
+        \u_trojan4/n31 ) );
+  XNOR2x1_ASAP7_75t_R U55 ( .A(\u_trojan4/lfsr [1]), .B(key[1]), .Y(
+        \u_trojan4/n3 ) );
+  XNOR2x1_ASAP7_75t_R U56 ( .A(\u_trojan4/lfsr [13]), .B(key[45]), .Y(
+        \u_trojan4/n29 ) );
+  XNOR2x1_ASAP7_75t_R U57 ( .A(\u_trojan4/lfsr [10]), .B(key[42]), .Y(
+        \u_trojan4/n27 ) );
+  XNOR2x1_ASAP7_75t_R U58 ( .A(\u_trojan4/lfsr [13]), .B(key[29]), .Y(
+        \u_trojan4/n25 ) );
+  XNOR2x1_ASAP7_75t_R U59 ( .A(\u_trojan4/lfsr [10]), .B(key[26]), .Y(
+        \u_trojan4/n23 ) );
+  XNOR2x1_ASAP7_75t_R U60 ( .A(\u_trojan4/lfsr [13]), .B(key[13]), .Y(
+        \u_trojan4/n21 ) );
+  XNOR2x1_ASAP7_75t_R U61 ( .A(\u_trojan4/lfsr [10]), .B(key[10]), .Y(
+        \u_trojan4/n19 ) );
+  XNOR2x1_ASAP7_75t_R U62 ( .A(\u_trojan4/lfsr [12]), .B(key[60]), .Y(
+        \u_trojan4/n17 ) );
+  XNOR2x1_ASAP7_75t_R U63 ( .A(\u_trojan4/lfsr [14]), .B(key[62]), .Y(
+        \u_trojan4/n160 ) );
+  XNOR2x1_ASAP7_75t_R U64 ( .A(\u_trojan4/lfsr [12]), .B(key[44]), .Y(
+        \u_trojan4/n15 ) );
+  XNOR2x1_ASAP7_75t_R U65 ( .A(\u_trojan4/lfsr [12]), .B(key[28]), .Y(
+        \u_trojan4/n13 ) );
+  XNOR2x1_ASAP7_75t_R U66 ( .A(\u_trojan4/lfsr [11]), .B(key[59]), .Y(
+        \u_trojan4/n127 ) );
+  XNOR2x1_ASAP7_75t_R U67 ( .A(\u_trojan4/lfsr [9]), .B(key[57]), .Y(
+        \u_trojan4/n125 ) );
+  XNOR2x1_ASAP7_75t_R U68 ( .A(\u_trojan4/lfsr [8]), .B(key[56]), .Y(
+        \u_trojan4/n123 ) );
+  XNOR2x1_ASAP7_75t_R U69 ( .A(\u_trojan4/lfsr [7]), .B(key[55]), .Y(
+        \u_trojan4/n121 ) );
+  XNOR2x1_ASAP7_75t_R U70 ( .A(\u_trojan4/lfsr [6]), .B(key[54]), .Y(
+        \u_trojan4/n119 ) );
+  XNOR2x1_ASAP7_75t_R U71 ( .A(\u_trojan4/lfsr [5]), .B(key[53]), .Y(
+        \u_trojan4/n117 ) );
+  XNOR2x1_ASAP7_75t_R U72 ( .A(\u_trojan4/lfsr [4]), .B(key[52]), .Y(
+        \u_trojan4/n115 ) );
+  XNOR2x1_ASAP7_75t_R U73 ( .A(\u_trojan4/lfsr [3]), .B(key[51]), .Y(
+        \u_trojan4/n113 ) );
+  XNOR2x1_ASAP7_75t_R U74 ( .A(\u_trojan4/lfsr [2]), .B(key[50]), .Y(
+        \u_trojan4/n111 ) );
+  XNOR2x1_ASAP7_75t_R U75 ( .A(\u_trojan4/lfsr [12]), .B(key[12]), .Y(
+        \u_trojan4/n11 ) );
+  XNOR2x1_ASAP7_75t_R U76 ( .A(\u_trojan4/lfsr [1]), .B(key[49]), .Y(
+        \u_trojan4/n109 ) );
+  XNOR2x1_ASAP7_75t_R U77 ( .A(\u_trojan4/lfsr [0]), .B(key[48]), .Y(
+        \u_trojan4/n107 ) );
+  XNOR2x1_ASAP7_75t_R U78 ( .A(\u_trojan4/lfsr [14]), .B(key[46]), .Y(
+        \u_trojan4/n105 ) );
+  XNOR2x1_ASAP7_75t_R U79 ( .A(\u_trojan4/lfsr [11]), .B(key[43]), .Y(
+        \u_trojan4/n103 ) );
+  XNOR2x1_ASAP7_75t_R U80 ( .A(\u_trojan4/lfsr [9]), .B(key[41]), .Y(
+        \u_trojan4/n101 ) );
+  XOR2x1_ASAP7_75t_R U81 ( .A(n17), .B(n18), .Y(\u_trojan4/n1 ) );
+  XNOR2x1_ASAP7_75t_R U82 ( .A(n4), .B(\u_trojan4/lfsr [10]), .Y(n18) );
+  XNOR2x1_ASAP7_75t_R U83 ( .A(\u_trojan4/lfsr [15]), .B(\u_trojan4/lfsr [13]), 
+        .Y(n17) );
+  BUFx2_ASAP7_75t_R U84 ( .A(\u_trojan4/n41 ), .Y(n19) );
+  BUFx2_ASAP7_75t_R U85 ( .A(\u_trojan4/n160 ), .Y(n20) );
+  BUFx2_ASAP7_75t_R U86 ( .A(\u_trojan4/n33 ), .Y(n21) );
+  BUFx2_ASAP7_75t_R U87 ( .A(\u_trojan4/n17 ), .Y(n22) );
+  BUFx2_ASAP7_75t_R U88 ( .A(\u_trojan4/n127 ), .Y(n23) );
+  BUFx2_ASAP7_75t_R U89 ( .A(\u_trojan4/n31 ), .Y(n24) );
+  BUFx2_ASAP7_75t_R U90 ( .A(\u_trojan4/n125 ), .Y(n25) );
+  BUFx2_ASAP7_75t_R U91 ( .A(\u_trojan4/n123 ), .Y(n26) );
+  BUFx2_ASAP7_75t_R U92 ( .A(\u_trojan4/n121 ), .Y(n27) );
+  BUFx2_ASAP7_75t_R U93 ( .A(\u_trojan4/n119 ), .Y(n28) );
+  BUFx2_ASAP7_75t_R U94 ( .A(\u_trojan4/n117 ), .Y(n29) );
+  BUFx2_ASAP7_75t_R U95 ( .A(\u_trojan4/n115 ), .Y(n30) );
+  BUFx2_ASAP7_75t_R U96 ( .A(\u_trojan4/n113 ), .Y(n31) );
+  BUFx2_ASAP7_75t_R U97 ( .A(\u_trojan4/n111 ), .Y(n32) );
+  BUFx2_ASAP7_75t_R U98 ( .A(\u_trojan4/n109 ), .Y(n33) );
+  BUFx2_ASAP7_75t_R U99 ( .A(\u_trojan4/n107 ), .Y(n34) );
+  BUFx2_ASAP7_75t_R U100 ( .A(\u_trojan4/n39 ), .Y(n35) );
+  BUFx2_ASAP7_75t_R U101 ( .A(\u_trojan4/n105 ), .Y(n36) );
+  BUFx2_ASAP7_75t_R U102 ( .A(\u_trojan4/n29 ), .Y(n37) );
+  BUFx2_ASAP7_75t_R U103 ( .A(\u_trojan4/n15 ), .Y(n38) );
+  BUFx2_ASAP7_75t_R U104 ( .A(\u_trojan4/n103 ), .Y(n39) );
+  BUFx2_ASAP7_75t_R U105 ( .A(\u_trojan4/n27 ), .Y(n40) );
+  BUFx2_ASAP7_75t_R U106 ( .A(\u_trojan4/n101 ), .Y(n41) );
+  BUFx2_ASAP7_75t_R U107 ( .A(\u_trojan4/n99 ), .Y(n42) );
+  BUFx2_ASAP7_75t_R U108 ( .A(\u_trojan4/n97 ), .Y(n43) );
+  BUFx2_ASAP7_75t_R U109 ( .A(\u_trojan4/n95 ), .Y(n44) );
+  BUFx2_ASAP7_75t_R U110 ( .A(\u_trojan4/n93 ), .Y(n45) );
+  BUFx2_ASAP7_75t_R U111 ( .A(\u_trojan4/n91 ), .Y(n46) );
+  BUFx2_ASAP7_75t_R U112 ( .A(\u_trojan4/n89 ), .Y(n47) );
+  BUFx2_ASAP7_75t_R U113 ( .A(\u_trojan4/n87 ), .Y(n48) );
+  BUFx2_ASAP7_75t_R U114 ( .A(\u_trojan4/n85 ), .Y(n49) );
+  BUFx2_ASAP7_75t_R U115 ( .A(\u_trojan4/n83 ), .Y(n50) );
+  BUFx2_ASAP7_75t_R U116 ( .A(\u_trojan4/n37 ), .Y(n51) );
+  BUFx2_ASAP7_75t_R U117 ( .A(\u_trojan4/n81 ), .Y(n52) );
+  BUFx2_ASAP7_75t_R U118 ( .A(\u_trojan4/n25 ), .Y(n53) );
+  BUFx2_ASAP7_75t_R U119 ( .A(\u_trojan4/n13 ), .Y(n54) );
+  BUFx2_ASAP7_75t_R U120 ( .A(\u_trojan4/n79 ), .Y(n55) );
+  BUFx2_ASAP7_75t_R U121 ( .A(\u_trojan4/n23 ), .Y(n56) );
+  BUFx2_ASAP7_75t_R U122 ( .A(\u_trojan4/n77 ), .Y(n57) );
+  BUFx2_ASAP7_75t_R U123 ( .A(\u_trojan4/n75 ), .Y(n58) );
+  BUFx2_ASAP7_75t_R U124 ( .A(\u_trojan4/n73 ), .Y(n59) );
+  BUFx2_ASAP7_75t_R U125 ( .A(\u_trojan4/n71 ), .Y(n60) );
+  BUFx2_ASAP7_75t_R U126 ( .A(\u_trojan4/n69 ), .Y(n61) );
+  BUFx2_ASAP7_75t_R U127 ( .A(\u_trojan4/n67 ), .Y(n62) );
+  BUFx2_ASAP7_75t_R U128 ( .A(\u_trojan4/n65 ), .Y(n63) );
+  BUFx2_ASAP7_75t_R U129 ( .A(\u_trojan4/n63 ), .Y(n64) );
+  BUFx2_ASAP7_75t_R U130 ( .A(\u_trojan4/n61 ), .Y(n65) );
+  BUFx2_ASAP7_75t_R U131 ( .A(\u_trojan4/n59 ), .Y(n66) );
+  BUFx2_ASAP7_75t_R U132 ( .A(\u_trojan4/n35 ), .Y(n67) );
+  BUFx2_ASAP7_75t_R U133 ( .A(\u_trojan4/n57 ), .Y(n68) );
+  BUFx2_ASAP7_75t_R U134 ( .A(\u_trojan4/n21 ), .Y(n69) );
+  BUFx2_ASAP7_75t_R U135 ( .A(\u_trojan4/n11 ), .Y(n70) );
+  BUFx2_ASAP7_75t_R U136 ( .A(\u_trojan4/n55 ), .Y(n71) );
+  BUFx2_ASAP7_75t_R U137 ( .A(\u_trojan4/n19 ), .Y(n72) );
+  BUFx2_ASAP7_75t_R U138 ( .A(\u_trojan4/n53 ), .Y(n73) );
+  BUFx2_ASAP7_75t_R U139 ( .A(\u_trojan4/n51 ), .Y(n74) );
+  BUFx2_ASAP7_75t_R U140 ( .A(\u_trojan4/n49 ), .Y(n75) );
+  BUFx2_ASAP7_75t_R U141 ( .A(\u_trojan4/n47 ), .Y(n76) );
+  BUFx2_ASAP7_75t_R U142 ( .A(\u_trojan4/n45 ), .Y(n77) );
+  BUFx2_ASAP7_75t_R U143 ( .A(\u_trojan4/n9 ), .Y(n78) );
+  BUFx2_ASAP7_75t_R U144 ( .A(\u_trojan4/n7 ), .Y(n79) );
+  BUFx2_ASAP7_75t_R U145 ( .A(\u_trojan4/n5 ), .Y(n80) );
+  BUFx2_ASAP7_75t_R U146 ( .A(\u_trojan4/n3 ), .Y(n81) );
+  BUFx2_ASAP7_75t_R U147 ( .A(\u_trojan4/n43 ), .Y(n82) );
+  BUFx2_ASAP7_75t_R U148 ( .A(n1), .Y(n83) );
+endmodule
+

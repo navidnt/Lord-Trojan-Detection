@@ -1,0 +1,113 @@
+/////////////////////////////////////////////////////////////
+// Created by: Synopsys DC Expert(TM) in wire load mode
+// Version   : V-2023.12-SP5
+// Date      : Wed Jul  9 11:12:39 2025
+/////////////////////////////////////////////////////////////
+
+
+module top ( m0_data_o, i_s15_data_o, i_s15_data_o_TrojanPayload );
+  input [31:0] m0_data_o;
+  input [31:0] i_s15_data_o;
+  output [31:0] i_s15_data_o_TrojanPayload;
+  wire   n63, n64, n65, n66, n67, n68, n69, n70, n71, n72, n73, n74, n75, n76,
+         n77, n78, n79, n80, n81, n82, n83, n84, n85, n86, n87, n88, n89, n90,
+         n91, n92, n93, n94;
+
+  BUFx2_ASAP7_75t_R U35 ( .A(i_s15_data_o[2]), .Y(
+        i_s15_data_o_TrojanPayload[2]) );
+  BUFx2_ASAP7_75t_R U36 ( .A(i_s15_data_o[3]), .Y(
+        i_s15_data_o_TrojanPayload[3]) );
+  BUFx2_ASAP7_75t_R U37 ( .A(i_s15_data_o[4]), .Y(
+        i_s15_data_o_TrojanPayload[4]) );
+  BUFx2_ASAP7_75t_R U38 ( .A(i_s15_data_o[5]), .Y(
+        i_s15_data_o_TrojanPayload[5]) );
+  BUFx2_ASAP7_75t_R U39 ( .A(i_s15_data_o[6]), .Y(
+        i_s15_data_o_TrojanPayload[6]) );
+  BUFx2_ASAP7_75t_R U40 ( .A(i_s15_data_o[7]), .Y(
+        i_s15_data_o_TrojanPayload[7]) );
+  BUFx2_ASAP7_75t_R U41 ( .A(i_s15_data_o[8]), .Y(
+        i_s15_data_o_TrojanPayload[8]) );
+  BUFx2_ASAP7_75t_R U42 ( .A(i_s15_data_o[9]), .Y(
+        i_s15_data_o_TrojanPayload[9]) );
+  BUFx2_ASAP7_75t_R U43 ( .A(i_s15_data_o[10]), .Y(
+        i_s15_data_o_TrojanPayload[10]) );
+  BUFx2_ASAP7_75t_R U44 ( .A(i_s15_data_o[11]), .Y(
+        i_s15_data_o_TrojanPayload[11]) );
+  BUFx2_ASAP7_75t_R U45 ( .A(i_s15_data_o[12]), .Y(
+        i_s15_data_o_TrojanPayload[12]) );
+  BUFx2_ASAP7_75t_R U46 ( .A(i_s15_data_o[13]), .Y(
+        i_s15_data_o_TrojanPayload[13]) );
+  BUFx2_ASAP7_75t_R U47 ( .A(i_s15_data_o[14]), .Y(
+        i_s15_data_o_TrojanPayload[14]) );
+  BUFx2_ASAP7_75t_R U48 ( .A(i_s15_data_o[15]), .Y(
+        i_s15_data_o_TrojanPayload[15]) );
+  BUFx2_ASAP7_75t_R U49 ( .A(i_s15_data_o[16]), .Y(
+        i_s15_data_o_TrojanPayload[16]) );
+  BUFx2_ASAP7_75t_R U50 ( .A(i_s15_data_o[17]), .Y(
+        i_s15_data_o_TrojanPayload[17]) );
+  BUFx2_ASAP7_75t_R U51 ( .A(i_s15_data_o[18]), .Y(
+        i_s15_data_o_TrojanPayload[18]) );
+  BUFx2_ASAP7_75t_R U52 ( .A(i_s15_data_o[19]), .Y(
+        i_s15_data_o_TrojanPayload[19]) );
+  BUFx2_ASAP7_75t_R U53 ( .A(i_s15_data_o[20]), .Y(
+        i_s15_data_o_TrojanPayload[20]) );
+  BUFx2_ASAP7_75t_R U54 ( .A(i_s15_data_o[21]), .Y(
+        i_s15_data_o_TrojanPayload[21]) );
+  BUFx2_ASAP7_75t_R U55 ( .A(i_s15_data_o[22]), .Y(
+        i_s15_data_o_TrojanPayload[22]) );
+  BUFx2_ASAP7_75t_R U56 ( .A(i_s15_data_o[23]), .Y(
+        i_s15_data_o_TrojanPayload[23]) );
+  BUFx2_ASAP7_75t_R U57 ( .A(i_s15_data_o[24]), .Y(
+        i_s15_data_o_TrojanPayload[24]) );
+  BUFx2_ASAP7_75t_R U58 ( .A(i_s15_data_o[25]), .Y(
+        i_s15_data_o_TrojanPayload[25]) );
+  BUFx2_ASAP7_75t_R U59 ( .A(i_s15_data_o[26]), .Y(
+        i_s15_data_o_TrojanPayload[26]) );
+  BUFx2_ASAP7_75t_R U60 ( .A(i_s15_data_o[27]), .Y(
+        i_s15_data_o_TrojanPayload[27]) );
+  BUFx2_ASAP7_75t_R U61 ( .A(i_s15_data_o[28]), .Y(
+        i_s15_data_o_TrojanPayload[28]) );
+  BUFx2_ASAP7_75t_R U62 ( .A(i_s15_data_o[29]), .Y(
+        i_s15_data_o_TrojanPayload[29]) );
+  BUFx2_ASAP7_75t_R U63 ( .A(i_s15_data_o[30]), .Y(
+        i_s15_data_o_TrojanPayload[30]) );
+  BUFx2_ASAP7_75t_R U64 ( .A(i_s15_data_o[31]), .Y(
+        i_s15_data_o_TrojanPayload[31]) );
+  OR2x2_ASAP7_75t_R U65 ( .A(n63), .B(i_s15_data_o[1]), .Y(
+        i_s15_data_o_TrojanPayload[1]) );
+  OR2x2_ASAP7_75t_R U66 ( .A(n63), .B(i_s15_data_o[0]), .Y(
+        i_s15_data_o_TrojanPayload[0]) );
+  AND2x2_ASAP7_75t_R U67 ( .A(n64), .B(n65), .Y(n63) );
+  NOR2x1_ASAP7_75t_R U68 ( .A(n66), .B(n67), .Y(n65) );
+  NAND2x1_ASAP7_75t_R U69 ( .A(n68), .B(n69), .Y(n67) );
+  AND2x2_ASAP7_75t_R U70 ( .A(n70), .B(n71), .Y(n69) );
+  NOR2x1_ASAP7_75t_R U71 ( .A(m0_data_o[26]), .B(m0_data_o[24]), .Y(n71) );
+  NOR2x1_ASAP7_75t_R U72 ( .A(m0_data_o[22]), .B(m0_data_o[20]), .Y(n70) );
+  AND2x2_ASAP7_75t_R U73 ( .A(n72), .B(n73), .Y(n68) );
+  NOR2x1_ASAP7_75t_R U74 ( .A(m0_data_o[1]), .B(m0_data_o[18]), .Y(n73) );
+  NOR2x1_ASAP7_75t_R U75 ( .A(m0_data_o[17]), .B(m0_data_o[15]), .Y(n72) );
+  NAND2x1_ASAP7_75t_R U76 ( .A(n74), .B(n75), .Y(n66) );
+  AND2x2_ASAP7_75t_R U77 ( .A(n76), .B(n77), .Y(n75) );
+  NOR2x1_ASAP7_75t_R U78 ( .A(m0_data_o[9]), .B(m0_data_o[8]), .Y(n77) );
+  NOR2x1_ASAP7_75t_R U79 ( .A(m0_data_o[6]), .B(m0_data_o[31]), .Y(n76) );
+  AND2x2_ASAP7_75t_R U80 ( .A(n78), .B(n79), .Y(n74) );
+  NOR2x1_ASAP7_75t_R U81 ( .A(m0_data_o[30]), .B(m0_data_o[2]), .Y(n79) );
+  NOR2x1_ASAP7_75t_R U82 ( .A(m0_data_o[29]), .B(m0_data_o[28]), .Y(n78) );
+  NOR2x1_ASAP7_75t_R U83 ( .A(n80), .B(n81), .Y(n64) );
+  NAND2x1_ASAP7_75t_R U84 ( .A(n82), .B(n83), .Y(n81) );
+  NOR2x1_ASAP7_75t_R U85 ( .A(n84), .B(n85), .Y(n83) );
+  NAND2x1_ASAP7_75t_R U86 ( .A(m0_data_o[27]), .B(m0_data_o[25]), .Y(n85) );
+  NAND2x1_ASAP7_75t_R U87 ( .A(m0_data_o[23]), .B(m0_data_o[21]), .Y(n84) );
+  NOR2x1_ASAP7_75t_R U88 ( .A(n86), .B(n87), .Y(n82) );
+  NAND2x1_ASAP7_75t_R U89 ( .A(m0_data_o[7]), .B(m0_data_o[5]), .Y(n87) );
+  NAND2x1_ASAP7_75t_R U90 ( .A(m0_data_o[4]), .B(m0_data_o[3]), .Y(n86) );
+  NAND2x1_ASAP7_75t_R U91 ( .A(n88), .B(n89), .Y(n80) );
+  NOR2x1_ASAP7_75t_R U92 ( .A(n90), .B(n91), .Y(n89) );
+  OR2x2_ASAP7_75t_R U93 ( .A(n92), .B(m0_data_o[0]), .Y(n91) );
+  INVx2_ASAP7_75t_R U94 ( .A(m0_data_o[12]), .Y(n92) );
+  OR2x2_ASAP7_75t_R U95 ( .A(m0_data_o[11]), .B(m0_data_o[10]), .Y(n90) );
+  NOR2x1_ASAP7_75t_R U96 ( .A(n93), .B(n94), .Y(n88) );
+  NAND2x1_ASAP7_75t_R U97 ( .A(m0_data_o[19]), .B(m0_data_o[16]), .Y(n94) );
+  NAND2x1_ASAP7_75t_R U98 ( .A(m0_data_o[14]), .B(m0_data_o[13]), .Y(n93) );
+endmodule
+

@@ -1,0 +1,53 @@
+/////////////////////////////////////////////////////////////
+// Created by: Synopsys DC Expert(TM) in wire load mode
+// Version   : V-2023.12-SP5
+// Date      : Wed Jul  9 11:11:00 2025
+/////////////////////////////////////////////////////////////
+
+
+module top ( pon_rst_n_i, prog_dat_i, pc_reg, prog_adr_o );
+  input [13:0] prog_dat_i;
+  input [12:0] pc_reg;
+  output [12:0] prog_adr_o;
+  input pon_rst_n_i;
+  wire   n26, n27, n28, n29, n30, n31, n32, n33, n34, n35, n36, n37, n38, n39,
+         n40, n41, n42, n43, n44, n45, n46, n47, n48;
+
+  BUFx2_ASAP7_75t_R U37 ( .A(pc_reg[0]), .Y(prog_adr_o[0]) );
+  XOR2x1_ASAP7_75t_R U38 ( .A(pc_reg[9]), .B(n26), .Y(prog_adr_o[9]) );
+  XNOR2x1_ASAP7_75t_R U39 ( .A(pc_reg[8]), .B(n27), .Y(prog_adr_o[8]) );
+  NAND2x1_ASAP7_75t_R U40 ( .A(pc_reg[7]), .B(n28), .Y(n27) );
+  XOR2x1_ASAP7_75t_R U41 ( .A(pc_reg[7]), .B(n28), .Y(prog_adr_o[7]) );
+  XNOR2x1_ASAP7_75t_R U42 ( .A(pc_reg[6]), .B(n29), .Y(prog_adr_o[6]) );
+  NAND2x1_ASAP7_75t_R U43 ( .A(pc_reg[5]), .B(n30), .Y(n29) );
+  XOR2x1_ASAP7_75t_R U44 ( .A(pc_reg[5]), .B(n30), .Y(prog_adr_o[5]) );
+  XNOR2x1_ASAP7_75t_R U45 ( .A(pc_reg[4]), .B(n31), .Y(prog_adr_o[4]) );
+  NAND2x1_ASAP7_75t_R U46 ( .A(pc_reg[3]), .B(n32), .Y(n31) );
+  XOR2x1_ASAP7_75t_R U47 ( .A(pc_reg[3]), .B(n32), .Y(prog_adr_o[3]) );
+  XNOR2x1_ASAP7_75t_R U48 ( .A(pc_reg[2]), .B(n33), .Y(prog_adr_o[2]) );
+  OR2x2_ASAP7_75t_R U49 ( .A(n34), .B(n35), .Y(n33) );
+  XNOR2x1_ASAP7_75t_R U50 ( .A(pc_reg[1]), .B(n35), .Y(prog_adr_o[1]) );
+  XOR2x1_ASAP7_75t_R U51 ( .A(pc_reg[12]), .B(n36), .Y(prog_adr_o[12]) );
+  AND2x2_ASAP7_75t_R U52 ( .A(n37), .B(pc_reg[11]), .Y(n36) );
+  XOR2x1_ASAP7_75t_R U53 ( .A(pc_reg[11]), .B(n37), .Y(prog_adr_o[11]) );
+  AND2x2_ASAP7_75t_R U54 ( .A(n38), .B(pc_reg[10]), .Y(n37) );
+  AND2x2_ASAP7_75t_R U55 ( .A(pc_reg[9]), .B(n26), .Y(n38) );
+  XNOR2x1_ASAP7_75t_R U56 ( .A(pc_reg[10]), .B(n39), .Y(prog_adr_o[10]) );
+  NAND2x1_ASAP7_75t_R U57 ( .A(n26), .B(pc_reg[9]), .Y(n39) );
+  AND2x2_ASAP7_75t_R U58 ( .A(pc_reg[8]), .B(n40), .Y(n26) );
+  AND2x2_ASAP7_75t_R U59 ( .A(pc_reg[7]), .B(n28), .Y(n40) );
+  AND2x2_ASAP7_75t_R U60 ( .A(pc_reg[6]), .B(n41), .Y(n28) );
+  AND2x2_ASAP7_75t_R U61 ( .A(pc_reg[5]), .B(n30), .Y(n41) );
+  AND2x2_ASAP7_75t_R U62 ( .A(pc_reg[4]), .B(n42), .Y(n30) );
+  AND2x2_ASAP7_75t_R U63 ( .A(pc_reg[3]), .B(n32), .Y(n42) );
+  AND2x2_ASAP7_75t_R U64 ( .A(n43), .B(pc_reg[2]), .Y(n32) );
+  NOR2x1_ASAP7_75t_R U65 ( .A(n35), .B(n34), .Y(n43) );
+  INVx2_ASAP7_75t_R U66 ( .A(pc_reg[1]), .Y(n34) );
+  NAND2x1_ASAP7_75t_R U67 ( .A(n44), .B(pon_rst_n_i), .Y(n35) );
+  NOR2x1_ASAP7_75t_R U68 ( .A(n45), .B(n46), .Y(n44) );
+  AND2x2_ASAP7_75t_R U69 ( .A(prog_dat_i[13]), .B(n47), .Y(n46) );
+  AND2x2_ASAP7_75t_R U70 ( .A(n48), .B(prog_dat_i[12]), .Y(n47) );
+  OR2x2_ASAP7_75t_R U71 ( .A(prog_dat_i[10]), .B(prog_dat_i[11]), .Y(n48) );
+  NOR2x1_ASAP7_75t_R U72 ( .A(prog_dat_i[13]), .B(prog_dat_i[12]), .Y(n45) );
+endmodule
+

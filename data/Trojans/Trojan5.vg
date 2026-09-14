@@ -1,0 +1,81 @@
+/////////////////////////////////////////////////////////////
+// Created by: Synopsys DC Expert(TM) in wire load mode
+// Version   : V-2023.12-SP5
+// Date      : Tue May 27 23:11:23 2025
+/////////////////////////////////////////////////////////////
+
+
+module Trojan5 ( pon_rst_n_i, prog_dat_i, pc_reg, prog_adr_o );
+  input [13:0] prog_dat_i;
+  input [12:0] pc_reg;
+  output [12:0] prog_adr_o;
+  input pon_rst_n_i;
+  wire   n66, n68, n69, n70, n71, n72, n73, n74, n75, n76, n77, n78, n79, n80,
+         n81, n82, n83, n84, n85, n86, n87, n88, n89, n90, n91, n92, n93, n94,
+         n95, n96, n97, n98, n99, n100, n101, n102, n103, n104, n105, n106,
+         n107, n108, n109, n110, n111, n112, n113, n114, n115;
+
+  INVx2_ASAP7_75t_R U73 ( .A(pc_reg[0]), .Y(n66) );
+  INVx2_ASAP7_75t_R U74 ( .A(n66), .Y(prog_adr_o[0]) );
+  AND2x2_ASAP7_75t_R U75 ( .A(n68), .B(n69), .Y(prog_adr_o[9]) );
+  OR2x2_ASAP7_75t_R U76 ( .A(n70), .B(pc_reg[9]), .Y(n68) );
+  AND2x2_ASAP7_75t_R U77 ( .A(n71), .B(n72), .Y(prog_adr_o[8]) );
+  INVx2_ASAP7_75t_R U78 ( .A(n70), .Y(n72) );
+  OR2x2_ASAP7_75t_R U79 ( .A(n73), .B(pc_reg[8]), .Y(n71) );
+  OR2x2_ASAP7_75t_R U80 ( .A(n74), .B(n75), .Y(prog_adr_o[7]) );
+  INVx2_ASAP7_75t_R U81 ( .A(n76), .Y(n75) );
+  OR2x2_ASAP7_75t_R U82 ( .A(n77), .B(pc_reg[7]), .Y(n76) );
+  AND2x2_ASAP7_75t_R U83 ( .A(pc_reg[7]), .B(n77), .Y(n74) );
+  AND2x2_ASAP7_75t_R U84 ( .A(n78), .B(n77), .Y(prog_adr_o[6]) );
+  INVx2_ASAP7_75t_R U85 ( .A(n79), .Y(n77) );
+  OR2x2_ASAP7_75t_R U86 ( .A(n80), .B(pc_reg[6]), .Y(n78) );
+  AND2x2_ASAP7_75t_R U87 ( .A(n81), .B(n82), .Y(prog_adr_o[5]) );
+  INVx2_ASAP7_75t_R U88 ( .A(n80), .Y(n82) );
+  OR2x2_ASAP7_75t_R U89 ( .A(n83), .B(pc_reg[5]), .Y(n81) );
+  OR2x2_ASAP7_75t_R U90 ( .A(n84), .B(n85), .Y(prog_adr_o[4]) );
+  INVx2_ASAP7_75t_R U91 ( .A(n86), .Y(n85) );
+  OR2x2_ASAP7_75t_R U92 ( .A(n87), .B(pc_reg[4]), .Y(n86) );
+  AND2x2_ASAP7_75t_R U93 ( .A(pc_reg[4]), .B(n87), .Y(n84) );
+  AND2x2_ASAP7_75t_R U94 ( .A(n88), .B(n87), .Y(prog_adr_o[3]) );
+  INVx2_ASAP7_75t_R U95 ( .A(n89), .Y(n87) );
+  OR2x2_ASAP7_75t_R U96 ( .A(n90), .B(pc_reg[3]), .Y(n88) );
+  AND2x2_ASAP7_75t_R U97 ( .A(n91), .B(n92), .Y(prog_adr_o[2]) );
+  INVx2_ASAP7_75t_R U98 ( .A(n90), .Y(n92) );
+  OR2x2_ASAP7_75t_R U99 ( .A(n93), .B(pc_reg[2]), .Y(n91) );
+  OR2x2_ASAP7_75t_R U100 ( .A(n94), .B(n95), .Y(prog_adr_o[1]) );
+  AND2x2_ASAP7_75t_R U101 ( .A(n96), .B(n97), .Y(n95) );
+  INVx2_ASAP7_75t_R U102 ( .A(pc_reg[1]), .Y(n97) );
+  AND2x2_ASAP7_75t_R U103 ( .A(pc_reg[1]), .B(n98), .Y(n94) );
+  INVx2_ASAP7_75t_R U104 ( .A(n96), .Y(n98) );
+  OR2x2_ASAP7_75t_R U105 ( .A(n99), .B(n100), .Y(prog_adr_o[12]) );
+  AND2x2_ASAP7_75t_R U106 ( .A(n101), .B(n102), .Y(n100) );
+  INVx2_ASAP7_75t_R U107 ( .A(pc_reg[12]), .Y(n102) );
+  AND2x2_ASAP7_75t_R U108 ( .A(pc_reg[12]), .B(n103), .Y(n99) );
+  AND2x2_ASAP7_75t_R U109 ( .A(n104), .B(n103), .Y(prog_adr_o[11]) );
+  INVx2_ASAP7_75t_R U110 ( .A(n101), .Y(n103) );
+  AND2x2_ASAP7_75t_R U111 ( .A(pc_reg[11]), .B(n105), .Y(n101) );
+  OR2x2_ASAP7_75t_R U112 ( .A(n105), .B(pc_reg[11]), .Y(n104) );
+  AND2x2_ASAP7_75t_R U113 ( .A(pc_reg[10]), .B(n106), .Y(n105) );
+  OR2x2_ASAP7_75t_R U114 ( .A(n107), .B(n108), .Y(prog_adr_o[10]) );
+  INVx2_ASAP7_75t_R U115 ( .A(n109), .Y(n108) );
+  OR2x2_ASAP7_75t_R U116 ( .A(n69), .B(pc_reg[10]), .Y(n109) );
+  AND2x2_ASAP7_75t_R U117 ( .A(pc_reg[10]), .B(n69), .Y(n107) );
+  INVx2_ASAP7_75t_R U118 ( .A(n106), .Y(n69) );
+  AND2x2_ASAP7_75t_R U119 ( .A(n70), .B(pc_reg[9]), .Y(n106) );
+  AND2x2_ASAP7_75t_R U120 ( .A(pc_reg[8]), .B(n73), .Y(n70) );
+  AND2x2_ASAP7_75t_R U121 ( .A(pc_reg[7]), .B(n79), .Y(n73) );
+  AND2x2_ASAP7_75t_R U122 ( .A(n80), .B(pc_reg[6]), .Y(n79) );
+  AND2x2_ASAP7_75t_R U123 ( .A(pc_reg[5]), .B(n83), .Y(n80) );
+  AND2x2_ASAP7_75t_R U124 ( .A(pc_reg[4]), .B(n89), .Y(n83) );
+  AND2x2_ASAP7_75t_R U125 ( .A(n90), .B(pc_reg[3]), .Y(n89) );
+  AND2x2_ASAP7_75t_R U126 ( .A(pc_reg[2]), .B(n93), .Y(n90) );
+  AND2x2_ASAP7_75t_R U127 ( .A(pc_reg[1]), .B(n96), .Y(n93) );
+  AND2x2_ASAP7_75t_R U128 ( .A(pon_rst_n_i), .B(n110), .Y(n96) );
+  AND2x2_ASAP7_75t_R U129 ( .A(n111), .B(n112), .Y(n110) );
+  INVx2_ASAP7_75t_R U130 ( .A(n113), .Y(n112) );
+  AND2x2_ASAP7_75t_R U131 ( .A(n114), .B(prog_dat_i[13]), .Y(n113) );
+  AND2x2_ASAP7_75t_R U132 ( .A(prog_dat_i[12]), .B(n115), .Y(n114) );
+  OR2x2_ASAP7_75t_R U133 ( .A(prog_dat_i[11]), .B(prog_dat_i[10]), .Y(n115) );
+  OR2x2_ASAP7_75t_R U134 ( .A(prog_dat_i[12]), .B(prog_dat_i[13]), .Y(n111) );
+endmodule
+
