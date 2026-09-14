@@ -1,1 +1,1 @@
-# Lord_Trojan_Detection
+# Trojan_Detection
