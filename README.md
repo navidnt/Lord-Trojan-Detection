@@ -1,1 +1,1 @@
-# Trojan_Detection
+# Hardware Trojan Detection on Gate-Level Netlist
