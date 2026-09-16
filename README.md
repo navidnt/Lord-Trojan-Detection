@@ -24,7 +24,7 @@ The evaluation metric balances both detection correctness and localization preci
 ## Repository Structure
 
 * `data/`: Benchmark netlists and ground-truth result files used for local evaluation.
-* `detection_codes/`: Python modules (`does_have_trojan0.py` to `9.py`) containing the specific Trojan detection patterns and logic.
+* `detection_codes/`: Python modules (`does_have_trojan0.py` to `does_have_trojan8_and_9.py`) containing the specific Trojan detection patterns and logic.
 * `utils/`: Netlist parsing and helper utility functions (e.g., `exploit_gates1.py`, `Tokenizer_functions.py`).
 * `main_decision.py`: Official contest entry execution script, formatted to meet CAD contest server inference rules.
 * `Main_decider.ipynb`: Interactive Jupyter notebook for batch testing, debugging, and calculating the final contest score on labeled datasets.
