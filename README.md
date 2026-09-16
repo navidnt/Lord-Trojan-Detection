@@ -45,6 +45,7 @@ The evaluation metric balances both detection correctness and localization preci
 **Usage:**
 ```bash
 python main_decision.py -netlist <path_to_netlist.v> -output <path_to_output_result.txt>
+```
 
 
 ### 2.Testing & Score Evaluation (`Main_decider.ipynb`)
