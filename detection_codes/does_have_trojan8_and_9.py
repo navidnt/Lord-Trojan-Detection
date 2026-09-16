@@ -87,7 +87,7 @@ def signals_to_dict(signals):
     return {sig.name: sig for sig in signals}
 
 
-def does_have_trojan9(target_file: str) -> List:
+def does_have_trojan8_and_9(target_file: str) -> List:
     trojan_gates = []
     trojan_gates_set = set()
 

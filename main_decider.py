@@ -16,7 +16,7 @@ from detection_codes.does_have_trojan1 import does_have_trojan1
 from detection_codes.does_have_trojan7 import does_have_trojan7
 from detection_codes.does_have_trojan6 import does_have_trojan6
 from detection_codes.does_have_trojan3 import does_have_trojan3
-from detection_codes.does_have_trojan9 import does_have_trojan9
+from detection_codes.does_have_trojan8_and_9 import does_have_trojan8_and_9
 
 
 
@@ -54,7 +54,7 @@ def does_have_any_trojan(target_file) -> List:
                                 if does_exist:
                                     Trojan_number_found = 6
                                 if not does_exist:
-                                    [trojan_gates, does_exist] = does_have_trojan9(target_file)
+                                    [trojan_gates, does_exist] = does_have_trojan8_and_9(target_file)
                                     if does_exist:
                                         Trojan_number_found = 9                            
                                 
