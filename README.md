@@ -1,25 +1,24 @@
 # Hardware Trojan Detection on Gate-Level Netlists
 
-## Overview
+More details about the code can be found in the paper cited at the end of this document.
 
-This repository contains our solution for the **ICCAD Contest 2025 (Problem A: Hardware Trojan Detection on Gate-Level Netlist)**. The project provides an automated pipeline designed to analyze Verilog netlists, determine whether a Hardware Trojan is present, and pinpoint the specific gate instances associated with the detected Trojan.
+This repository contains our solution for the **[ICCAD Contest 2025 (Problem A: Hardware Trojan Detection on Gate-Level Netlist)](https://www.iccad-contest.org/2025/)**. The project provides an automated pipeline designed to analyze Verilog netlists, determine whether a Hardware Trojan is present, and pinpoint the specific gate instances associated with the detected Trojan.
 
-Hardware Trojans pose significant security risks to integrated circuit (IC) designs. **Problem A of the ICCAD 2025 Contest** focuses on detecting stealthy Hardware Trojans inserted into flattened gate-level Verilog netlists. 
+Hardware Trojans pose significant security risks to integrated circuit (IC) designs. Problem A of the ICCAD 2025 Contest focuses on detecting stealthy Hardware Trojans inserted into flattened gate-level Verilog netlists.
 
 The primary objective is twofold:
 1. **Classification:** Identify whether a netlist contains a Hardware Trojan (`TROJANED` vs. `NO_TROJAN`).
 2. **Localization:** If a Trojan exists, accurately identify and list all gate instances that constitute the Trojan structure.
 
-More details can be found in the paper cited at the end of this document.
-
 ### Contest Scoring Rule
 The evaluation metric balances both detection correctness and localization precision:
 * **Base Score:** Awarded for correctly classifying netlists as Trojan-free or Trojan-infected.
 * **Localization Score:** Calculated using the F1-Score based on True Positives (TP), False Positives (FP), and False Negatives (FN) of the identified Trojan gates:
-  
+
   $$F1 = 2 \times \frac{Precision \times Recall}{Precision + Recall}$$
 
 * **Final Score:** Sum of base scores and localization F1-scores across all test benchmarks.
+
 
 
 ---
