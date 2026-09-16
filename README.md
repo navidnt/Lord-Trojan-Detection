@@ -4,10 +4,6 @@
 
 This repository contains our solution for the **ICCAD Contest 2025 (Problem A: Hardware Trojan Detection on Gate-Level Netlist)**. The project provides an automated pipeline designed to analyze Verilog netlists, determine whether a Hardware Trojan is present, and pinpoint the specific gate instances associated with the detected Trojan.
 
----
-
-## ICCAD Contest 2025 – Problem A
-
 Hardware Trojans pose significant security risks to integrated circuit (IC) designs. **Problem A of the ICCAD 2025 Contest** focuses on detecting stealthy Hardware Trojans inserted into flattened gate-level Verilog netlists. 
 
 The primary objective is twofold:
