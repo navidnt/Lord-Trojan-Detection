@@ -48,7 +48,7 @@ python main_decision.py -netlist <path_to_netlist.v> -output <path_to_output_res
 ```
 
 
-### 2.Testing & Score Evaluation (`Main_decider.ipynb`)
+### 2. Testing & Score Evaluation (`Main_decider.ipynb`)
 
 Main_decider.ipynb is designed for offline development, debugging, and evaluation on labeled benchmark datasets (where ground-truth Trojan gate lists are available).
 
