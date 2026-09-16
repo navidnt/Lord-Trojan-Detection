@@ -10,6 +10,8 @@ The primary objective is twofold:
 1. **Classification:** Identify whether a netlist contains a Hardware Trojan (`TROJANED` vs. `NO_TROJAN`).
 2. **Localization:** If a Trojan exists, accurately identify and list all gate instances that constitute the Trojan structure.
 
+More details can be found in the paper cited at the end of this document.
+
 ### Contest Scoring Rule
 The evaluation metric balances both detection correctness and localization precision:
 * **Base Score:** Awarded for correctly classifying netlists as Trojan-free or Trojan-infected.
@@ -19,14 +21,15 @@ The evaluation metric balances both detection correctness and localization preci
 
 * **Final Score:** Sum of base scores and localization F1-scores across all test benchmarks.
 
+
 ---
 
 ## Repository Structure
 
 * `data/`: Benchmark netlists and ground-truth result files used for local evaluation.
 * `detection_codes/`: Python modules (`does_have_trojan0.py` to `does_have_trojan8_and_9.py`) containing the specific Trojan detection patterns and logic.
-* `utils/`: Netlist parsing and helper utility functions (e.g., `exploit_gates1.py`, `Tokenizer_functions.py`).
-* `main_decision.py`: Official contest entry execution script, formatted to meet CAD contest server inference rules.
+* `utils/`: Netlist parsing and helper utility functions.
+* `main_decision.py`: Official contest execution script.
 * `Main_decider.ipynb`: Interactive Jupyter notebook for batch testing, debugging, and calculating the final contest score on labeled datasets.
 * `README.md`: Project documentation.
 
@@ -34,7 +37,7 @@ The evaluation metric balances both detection correctness and localization preci
 
 ## How to Run
 
-### 1. Contest Execution Format (`main_decision.py`)
+### 1. Contest Execution Format (`main_decisider.py`)
 
 `main_decision.py` complies with the standard submission format required by the ICCAD contest. It takes an input Verilog netlist file and generates an output text file containing the detection results.
 
@@ -44,7 +47,7 @@ python main_decision.py -netlist <path_to_netlist.v> -output <path_to_output_res
 ```
 
 
-### 2. Testing & Score Evaluation (`Main_decider.ipynb`)
+### 2. Testing & Score Evaluation (`main_evaluator.ipynb`)
 
 Main_decider.ipynb is designed for offline development, debugging, and evaluation on labeled benchmark datasets (where ground-truth Trojan gate lists are available).
 
