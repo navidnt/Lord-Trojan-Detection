@@ -45,3 +45,18 @@ The evaluation metric balances both detection correctness and localization preci
 **Usage:**
 ```bash
 python main_decision.py -netlist <path_to_netlist.v> -output <path_to_output_result.txt>
+
+
+### 2.Testing & Score Evaluation (`Main_decider.ipynb`)
+
+Main_decider.ipynb is designed for offline development, debugging, and evaluation on labeled benchmark datasets (where ground-truth Trojan gate lists are available).
+
+Features:
+* Runs detection across test datasets in batch mode.
+* Compares predicted Trojan gates against ground-truth labels (result*.txt).
+* Computes performance metrics including $\text{Precision}$, $\text{Recall}$, $\text{TPR}$, $\text{FPR}$, and $\text{F}_1$-Score per benchmark.
+* Outputs the aggregated Final Contest Score according to official competition evaluation rules.
+
+## Citation
+
+If you use this repository, detection algorithms, or dataset structure in your research, please cite our paper:
