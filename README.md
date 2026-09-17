@@ -62,4 +62,4 @@ Features:
 
 ## Citation
 
-If you use this repository, detection algorithms, or dataset structure in your research, please cite our paper:
+Please cite the above arXiv paper if you want to cite this code.
