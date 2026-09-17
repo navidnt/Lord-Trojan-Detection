@@ -8,6 +8,7 @@ More details about the procedures can be found in the paper below.
 * N. N. Tehrani, A. Davoodi, and R. O. Topaloglu, “Demystifying gate-level localization of rtl trojans,” 2026. [Online]. Available:
 https://arxiv.org/abs/2609.17922
 
+---
 
 Hardware Trojans pose significant security risks to integrated circuit (IC) designs. Problem A of the ICCAD 2025 Contest focuses on detecting stealthy Hardware Trojans inserted into flattened gate-level Verilog netlists.
 
@@ -23,8 +24,6 @@ The evaluation metric balances both detection correctness and localization preci
   $$F1 = 2 \times \frac{Precision \times Recall}{Precision + Recall}$$
 
 * **Final Score:** Sum of base scores and localization F1-scores across all test benchmarks.
-
-
 
 ---
 
