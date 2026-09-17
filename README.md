@@ -36,7 +36,7 @@ The evaluation metric balances both detection correctness and localization preci
 
 ## How to Run
 
-### 1. Contest Execution Format (`main_decisider.py`)
+### 1. Contest Execution Format (`main_decider.py`)
 
 `main_decider.py` complies with the standard submission format required by the ICCAD contest. It takes an input Verilog netlist file and generates an output text file containing the detection results.
 
