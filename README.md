@@ -28,8 +28,8 @@ The evaluation metric balances both detection correctness and localization preci
 * `data/`: Benchmark netlists and ground-truth result files used for local evaluation.
 * `detection_codes/`: Python modules (`does_have_trojan0.py` to `does_have_trojan8_and_9.py`) containing the specific Trojan detection patterns and logic.
 * `utils/`: Netlist parsing and helper utility functions.
-* `main_decision.py`: Official contest execution script.
-* `Main_decider.ipynb`: Interactive Jupyter notebook for batch testing, debugging, and calculating the final contest score on labeled datasets.
+* `main_decider.py`: Official contest execution script.
+* `main_evaluator.ipynb`: Interactive Jupyter notebook for batch testing, debugging, and calculating the final contest score on labeled datasets.
 * `README.md`: Project documentation.
 
 ---
@@ -38,17 +38,17 @@ The evaluation metric balances both detection correctness and localization preci
 
 ### 1. Contest Execution Format (`main_decisider.py`)
 
-`main_decision.py` complies with the standard submission format required by the ICCAD contest. It takes an input Verilog netlist file and generates an output text file containing the detection results.
+`main_decider.py` complies with the standard submission format required by the ICCAD contest. It takes an input Verilog netlist file and generates an output text file containing the detection results.
 
 **Usage:**
 ```bash
-python main_decision.py -netlist <path_to_netlist.v> -output <path_to_output_result.txt>
+python main_decider.py -netlist <path_to_netlist.v> -output <path_to_output_result.txt>
 ```
 
 
 ### 2. Testing & Score Evaluation (`main_evaluator.ipynb`)
 
-Main_decider.ipynb is designed for offline development, debugging, and evaluation on labeled benchmark datasets (where ground-truth Trojan gate lists are available).
+main_evaluator.ipynb is designed for offline development, debugging, and evaluation on labeled benchmark datasets (where ground-truth Trojan gate lists are available).
 
 Features:
 * Runs detection across test datasets in batch mode.
